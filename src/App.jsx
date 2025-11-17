@@ -1,15 +1,14 @@
 import React from 'react'
 import Header from './components/Header'
 import Home from './pages/Home'
+import Getinvolved from './components/GetInvolved'
 
 const App = () => {
   return (
-    <div className='min-h-screen w-full flex justify-start flex-col items-center font-inria px-2'>
+    <div className='min-h-screen w-full flex justify-start flex-col items-center font-inria px-2 overflow-x-hidden'>
       <Header/>
-      {/* make home page component and mount here */}
-      <Home />
-
-      {/* make getInvoled page component and mount here */}
+      <Home/>
+      <Getinvolved/>
     </div>
   )
 }
