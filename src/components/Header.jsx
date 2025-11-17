@@ -7,7 +7,7 @@ const Header = () => {
         <a href="#home">
             <img src="logo.svg" alt="logo" />
         </a>
-        <ul className='flex items-center gap-10 text-lg uppercase font-semibold'>
+        <ul className='flex items-center gap-10 text-lg uppercase font-semibold sticky'>
             <li className='cursor-pointer hover:bg-gray-100'><a href="#home">Home</a></li>
             <li className='cursor-pointer hover:bg-gray-100'><a href="#about-us">About Us</a></li>
             <li className='cursor-pointer hover:bg-gray-100'><a href="#campaign">Campaign</a></li>
