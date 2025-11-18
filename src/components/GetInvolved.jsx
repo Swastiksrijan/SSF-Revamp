@@ -1,7 +1,7 @@
 function Getinvolved() {
   return (
-    <div className="min-h-screen w-screen flex flex-col items-center justify-center">
-      <h1 className="text-4xl font-semibold italic mt-5">
+    <div className="min-h-screen w-screen flex flex-col items-center justify-center py-2 px-2">
+      <h1 className="text-4xl font-semibold italic mt-10">
         Get Involved - Swastik Srijan Foundation
       </h1>
       <p className="mt-3 text-zinc-500 font-semibold text-center">
