@@ -3,6 +3,7 @@ import Header from './components/Header'
 import Home from './pages/Home'
 import Getinvolved from './components/GetInvolved'
 import Aboutus from './components/Aboutus'
+import KeyFocus from './pages/KeyFocus'
 
 const App = () => {
   return (
