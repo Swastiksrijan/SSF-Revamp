@@ -1,149 +1,102 @@
+import { FaArrowRightLong } from "react-icons/fa6";
+
 function Getinvolved() {
   return (
-    <div className="min-h-screen w-screen flex flex-col items-center justify-center py-2 px-2">
-      <h1 className="text-4xl font-semibold italic mt-10">
+    <div className="min-h-screen w-full flex flex-col items-center py-6 ">
+      {/* Heading */}
+      <h1 className="text-3xl md:text-4xl font-semibold italic mt-10 text-center">
         Get Involved - Swastik Srijan Foundation
       </h1>
-      <p className="mt-3 text-zinc-500 font-semibold text-center">
-        Join us to create imapct in education, health, woman empowerment,
-        <br></br>
+
+      <p className="mt-3 text-zinc-500 font-semibold text-center text-sm md:text-base">
+        Join us to create impact in education, health, woman empowerment,
+        <br className="hidden md:block" />
         environment and more
       </p>
-      <div className="mt-7 grid grid-cols-3 gap-y-13 gap-x-24">
-        <div className="bg-blue-200 w-[290px] h-68 shadow-[6px_6px_0px_#000]">
-          <div className="z-11 w-[270px] h-54 bg-white m-2">
-            <h1 className="font-bold text-3xl pt-3 pl-3 pb-3">Volunteer</h1>
-            <p className="font-semibold text-zinc-400 pl-3">
-              Contribute your time and passion to make a difference
-            </p>
-            <span className="bg-blue-300 ml-3 mt-8 text-[14px] p-1 inline-block">
-              Community work
-            </span>
-            <span className="bg-blue-300 ml-3 text-[14px] p-1 inline-block">
-              Teaching
-            </span>
-            <span className="bg-blue-300 ml-3 mt-2 text-[14px] p-1 inline-block">
-              Awareness Drives
-            </span>
-          </div>
-          <button className="font-semibold ml-5 transition-transform duration-500 hover:scale-110">
-            <a href="#">Explore</a>
-          </button>
-        </div>
 
-        <div className="bg-purple-200 w-[290px] h-68 shadow-[6px_6px_0px_#000]">
-          <div className="z-11 w-[270px] h-54 bg-white m-2">
-            <h1 className="font-bold text-3xl pt-3 pl-3 pb-3">Member</h1>
-            <p className="font-semibold text-zinc-400 pl-3">
-              Join our growing family and be part of lasting charge
-            </p>
-            <span className="bg-purple-300 ml-3 mt-8 text-[14px] p-1 inline-block">
-              Membership Benefit
-            </span>
-            <span className="bg-purple-300 ml-3 text-[14px] p-1 inline-block">
-              Network
-            </span>
-            <span className="bg-purple-300 ml-3 mt-2 text-[14px] p-1 inline-block">
-              Impact Reports
-            </span>
-          </div>
-          <button className="font-semibold ml-5 transition-transform duration-500 hover:scale-110">
-            <a href="#">Explore</a>
-          </button>
-        </div>
+      {/* GRID RESPONSIVE */}
+      <div className="mt-10 w-full max-w-6xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 place-items-center">
 
-        <div className="bg-red-200 w-[290px] h-68 shadow-[6px_6px_0px_#000]">
-          <div className="z-11 w-[270px] h-54 bg-white m-2">
-            <h1 className="font-bold text-3xl pt-3 pl-3 pb-3">
-              Donor/Supporter
-            </h1>
-            <p className="font-semibold text-zinc-400 pl-3">
-              Fuel Our mission with your
-              <br></br>
-              generous contribution
-            </p>
-            <span className="bg-red-300 ml-3 mt-8 text-[14px] p-1 inline-block">
-              One-Time
-            </span>
-            <span className="bg-red-300 ml-3 text-[14px] p-1 inline-block">
-              Monthly Supports
-            </span>
-            <span className="bg-red-300 ml-3 mt-2 text-[14px] p-1 inline-block">
-              Awareness Drives
-            </span>
-          </div>
-          <button className="font-semibold ml-5 transition-transform duration-500 hover:scale-110">
-            <a href="#">Explore</a>
-          </button>
-        </div>
+        {[
+          {
+            title: "Volunteer",
+            color: "blue",
+            tags: ["Community work", "Teaching", "Awareness Drives"],
+          },
+          {
+            title: "Member",
+            color: "purple",
+            tags: ["Membership Benefit", "Network", "Impact Reports"],
+          },
+          {
+            title: "Donor/Supporter",
+            color: "red",
+            tags: ["One-Time", "Monthly Supports", "Awareness Drives"],
+          },
+          {
+            title: "Partnership",
+            color: "green",
+            tags: ["Brand Collaboration", "Join Events", "Awareness Drives"],
+          },
+          {
+            title: "Collaboration",
+            color: "orange",
+            tags: ["Join Campaigns", "Co-Initiatives", "Awareness Program"],
+          },
+          {
+            title: "Career/Internship",
+            color: "pink",
+            tags: ["Internships", "Career Growth", "Skill Building"],
+          },
+        ].map((item, i) => (
+          <div
+            key={i}
+            className={`bg-${item.color}-200 w-full max-w-[290px] shadow-[6px_6px_0px_#000] rounded-sm`}
+          >
+            {/* Inner Card */}
+            <div className="bg-white m-2 p-3 rounded-sm">
+              <h1 className="font-bold text-2xl md:text-3xl pb-3">
+                {item.title}
+              </h1>
 
-        <div className="bg-green-200 w-[290px]  h-68 shadow-[6px_6px_0px_#000]">
-          <div className=" z-11 w-[270px] h-54 bg-white m-2">
-            <h1 className="font-bold text-3xl pt-3 pl-3 pb-3">Partnership</h1>
-            <p className="font-semibold text-zinc-400 pl-3">
-              Collaborate with us to create a social impact through CSR
-              initiatives
-            </p>
-            <span className="bg-green-300 ml-3 mt-8 text-[14px] p-1 inline-block">
-              Brand Collaboration
-            </span>
-            <span className="bg-green-300 ml-3 text-[14px] p-1 inline-block">
-              Join Events
-            </span>
-            <span className="bg-green-300 ml-3 mt-2 text-[14px] p-1 inline-block">
-              Awareness Drives
-            </span>
-          </div>
-          <button className="font-semibold ml-5 transition-transform duration-500 hover:scale-110">
-            <a href="#">Explore</a>
-          </button>
-        </div>
+              <p className="font-semibold text-zinc-400">
+                {item.title === "Volunteer" &&
+                  "Contribute your time and passion to make a difference"}
+                {item.title === "Member" &&
+                  "Join our growing family and be part of lasting change"}
+                {item.title === "Donor/Supporter" &&
+                  "Fuel our mission with your generous contribution"}
+                {item.title === "Partnership" &&
+                  "Collaborate with us to create a social impact through CSR program"}
+                {item.title === "Collaboration" &&
+                  "Let's work together to expand and amplify change"}
+                {item.title === "Career/Internship" &&
+                  "Learn, grow, and create impact with purpose-driven work"}
+              </p>
 
-        <div className="bg-orange-200 w-[290px] h-68 shadow-[6px_6px_0px_#000]">
-          <div className="z-11 w-[270px] h-54 bg-white m-2">
-            <h1 className="font-bold text-3xl pt-3 pl-3 pb-3">Collaboration</h1>
-            <p className="font-semibold text-zinc-400 pl-3">
-              Let's work together to expand and amplify change
-            </p>
-            <span className="bg-orange-300 ml-3 mt-8 text-[14px] p-1 inline-block">
-              Join Compaigns
-            </span>
-            <span className="bg-orange-300 ml-3 text-[14px] p-1 inline-block">
-              Co-Initiatives
-            </span>
-            <span className="bg-orange-300 ml-3 mt-2 text-[14px] p-1 inline-block">
-              Awareness Program
-            </span>
-          </div>
-          <button className="font-semibold ml-5 transition-transform duration-500 hover:scale-110">
-            <a href="#">Explore</a>
-          </button>
-        </div>
+              {/* Tags */}
+              <div className="mt-4 flex flex-wrap gap-2">
+                {item.tags.map((tag, t) => (
+                  <span
+                    key={t}
+                    className={`bg-${item.color}-300 text-[14px] p-1 px-2 inline-block rounded-sm`}
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
 
-        <div className="bg-pink-200 w-[290px] h-68 shadow-[6px_6px_0px_#000] mb-1">
-          <div className=" z-11 w-[270px] h-54 bg-white m-2">
-            <h1 className="font-bold text-3xl pt-3 pl-3 pb-3">
-              Career/Internship
-            </h1>
-            <p className="font-semibold text-zinc-400 pl-3">
-              Learn, grow, and create impact with purpose-driven work
-            </p>
-            <span className="bg-pink-300 ml-3 mt-8 text-[14px] p-1 inline-block">
-              Internships
-            </span>
-            <span className="bg-pink-300 ml-3 text-[14px] p-1 inline-block">
-              Career Growth
-            </span>
-            <span className="bg-pink-300 ml-3 mt-2 text-[14px] p-1 inline-block">
-              Skill Building
-            </span>
+            {/* Button */}
+            <button className="font-semibold flex  items-center gap-2 ml-5 my-3 transition-transform duration-500 hover:scale-110">
+              <a className="text-lg" href="#">Explore</a>
+              <FaArrowRightLong/>
+            </button>
           </div>
-          <button className="font-semibold ml-5 transition-transform duration-500 hover:scale-110">
-            <a href="#">Explore</a>
-          </button>
-        </div>
+        ))}
       </div>
     </div>
   );
 }
+
 export default Getinvolved;

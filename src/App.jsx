@@ -7,7 +7,7 @@ import KeyFocus from './pages/KeyFocus'
 
 const App = () => {
   return (
-    <div className='min-h-screen w-full flex justify-start flex-col items-center font-inria px-2 overflow-x-hidden'>
+    <div className='min-h-screen w-full flex justify-start flex-col items-center font-inria px-4 overflow-x-hidden'>
       {/* Header Page */}
       <Header/>
       {/* Home Page */}
