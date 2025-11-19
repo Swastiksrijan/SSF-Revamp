@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import Getinvolved from './components/GetInvolved'
 import Aboutus from './components/Aboutus'
 import KeyFocus from './pages/KeyFocus'
+import Team from './pages/Team'
 
 const App = () => {
   return (
@@ -18,6 +19,9 @@ const App = () => {
       <Aboutus/>
       {/* Key focus Page */}
       <KeyFocus />
+
+      <Team />
+
     </div>
   )
 }
