@@ -20,38 +20,38 @@ function Getinvolved() {
         {[
           {
             title: "Volunteer",
-            color: "blue",
+            color: "bg-blue-200",
             tags: ["Community work", "Teaching", "Awareness Drives"],
           },
           {
             title: "Member",
-            color: "purple",
+            color: "bg-purple-200",
             tags: ["Membership Benefit", "Network", "Impact Reports"],
           },
           {
             title: "Donor/Supporter",
-            color: "red",
+            color: "bg-red-200",
             tags: ["One-Time", "Monthly Supports", "Awareness Drives"],
           },
           {
             title: "Partnership",
-            color: "green",
+            color: "bg-green-200",
             tags: ["Brand Collaboration", "Join Events", "Awareness Drives"],
           },
           {
             title: "Collaboration",
-            color: "orange",
+            color: "bg-orange-200",
             tags: ["Join Campaigns", "Co-Initiatives", "Awareness Program"],
           },
           {
             title: "Career/Internship",
-            color: "pink",
+            color: "bg-pink-200",
             tags: ["Internships", "Career Growth", "Skill Building"],
           },
         ].map((item, i) => (
           <div
             key={i}
-            className={`bg-${item.color}-200 w-full max-w-[290px] shadow-[6px_6px_0px_#000] rounded-sm`}
+            className={`${item.color} w-full max-w-[290px] shadow-[6px_6px_0px_#000] rounded-sm`}
           >
             {/* Inner Card */}
             <div className="bg-white m-2 p-3 rounded-sm">
@@ -79,7 +79,7 @@ function Getinvolved() {
                 {item.tags.map((tag, t) => (
                   <span
                     key={t}
-                    className={`bg-${item.color}-300 text-[14px] p-1 px-2 inline-block rounded-sm`}
+                    className={`${item.color} text-[14px] p-1 px-2 inline-block rounded-sm`}
                   >
                     {tag}
                   </span>

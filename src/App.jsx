@@ -5,6 +5,7 @@ import Getinvolved from './components/GetInvolved'
 import Aboutus from './components/Aboutus'
 import KeyFocus from './pages/KeyFocus'
 import Team from './pages/Team'
+import Impactstories from './components/ImpactStories'
 
 const App = () => {
   return (
@@ -19,7 +20,7 @@ const App = () => {
       <Aboutus/>
       {/* Key focus Page */}
       <KeyFocus />
-
+      <Impactstories></Impactstories>
       <Team />
 
     </div>
