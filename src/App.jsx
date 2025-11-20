@@ -5,6 +5,7 @@ import Getinvolved from './components/GetInvolved'
 import Aboutus from './components/Aboutus'
 import KeyFocus from './pages/KeyFocus'
 import Team from './pages/Team'
+import Collabrations from './pages/Collabrations'
 
 const App = () => {
   return (
@@ -21,6 +22,8 @@ const App = () => {
       <KeyFocus />
 
       <Team />
+
+      <Collabrations />
 
     </div>
   )
