@@ -4,10 +4,12 @@ import Frame3 from "../assets/Frame3.png";
 import Connect from "../assets/Connect.png";
 function Impactstories() {
     return (
-        <div className="min-h-screen w-full flex flex-col items-center py-6 bg-[url(./assets/grid.svg)] bg-contain">
-            <h1 className="text-5xl font-bold"><i>Our Impact Stories</i></h1>
-            <p className="font-semibold text-zinc-500 mt-5 text-xl">Real stories of hope, compassion, and community change</p>
-            <div className="realtive pt-20 pb-20 w-full h-full bg-gradient-to-b from-white/0 via-white to-white flex flex-col items-center">
+        <div className="min-h-screen w-full flex flex-col items-center justify-between pt-6 bg-[url(./assets/grid.svg)] bg-contain">
+           <div className="pt-10">
+             <h1 className="text-5xl text-center font-bold"><i>Our Impact Stories</i></h1>
+            <p className="font-semibold text-center  text-zinc-500 mt-5 text-xl">Real stories of hope, compassion, and community change</p>
+           </div>
+            <div className="realtive pt-20 pb-24  w-full h-full bg-gradient-to-b from-white/0 via-white to-white flex flex-col items-center">
                 <div className="flex items-center justify-center w-full flex-wrap gap-6 lg:gap-0">
                     <div className="w-[330px] border-3 border-dashed border-gray-500 p-2">
                         <img src={Frame1} className="w-full p-2"></img>
