@@ -14,15 +14,15 @@ export default function TeamSection() {
   return (
     <div className="bg-gray-100 py-4 ">
       <div className="w-full min-h-[70vh] flex items-center justify-center relative">
-        <div className="flex gap-20 animate-scrollX hover:[animation-play-state:paused]">
+        <div className="flex gap-1 md:gap-6 animate-scrollX hover:[animation-play-state:paused]">
 
           {loopMembers.map((member, idx) => (
             <div
               key={idx}
-              className={`flex flex-col items-center transition-all duration-300 
+              className={`flex flex-col items-center transition-all duration-300
                 ${idx % 2 === 0 ? "translate-y-20" : "-translate-y-20"}`}
             >
-              <div className="w-52 h-52 rounded-full overflow-hidden shadow-lg drop-shadow-lg drop-shadow-blue-400">
+              <div className="w-30 border h-30 md:w-52 md:h-52 rounded-full overflow-hidden  ">
                 <img src={member.img} className="w-full h-full object-cover" />
               </div>
 
