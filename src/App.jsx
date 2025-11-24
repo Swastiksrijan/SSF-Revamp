@@ -10,7 +10,7 @@ import Impactstories from './components/ImpactStories'
 
 const App = () => {
   return (
-    <div className='min-h-screen w-full flex justify-start flex-col items-center font-inria px-4 overflow-x-hidden'>
+    <div className='min-h-screen w-full flex justify-start flex-col items-center font-inria  overflow-x-hidden'>
       {/* Header Page */}
       <Header/>
       {/* Home Page */}
@@ -21,9 +21,11 @@ const App = () => {
       <Aboutus/>
       {/* Key focus Page */}
       <KeyFocus />
-      <Impactstories></Impactstories>
+      {/* impact Page */}
+      <Impactstories/>\
+      {/* team Page */}
       <Team />
-
+      {/* Collab Page */}
       <Collabrations />
 
     </div>

@@ -63,7 +63,7 @@ export default function Home() {
 };
 
   return (
-    <div className="relative w-full min-h-screen bg-[url(./assets/grid.svg)] bg-contain bg-center ">
+    <div className="relative w-full min-h-screen bg-[url(./assets/grid.svg)] bg-contain bg-center px-4">
       <div className="relative pt-32 pb-20 w-full bg-linear-to-b from-white/0 via-white to-white">
         <div className="content w-full max-w-6xl mx-auto space-y-14">
           <div className="f-content flex flex-col lg:flex-row items-center justify-between gap-10 w-full">
