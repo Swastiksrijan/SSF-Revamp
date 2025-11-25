@@ -8,6 +8,7 @@ import Team from './pages/Team'
 import Collabrations from './pages/Collabrations'
 import Impactstories from './components/ImpactStories'
 import ProgressSection from "./pages/ProgressSection"
+import Supportour from './components/Supportour'
 
 const App = () => {
   return (
@@ -28,8 +29,6 @@ const App = () => {
       <Team />
       {/* Collab Page */}
       <Collabrations />
-
-      <ProgressSection />
 
     </div>
   )
