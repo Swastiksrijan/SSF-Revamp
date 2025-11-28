@@ -10,6 +10,7 @@ import Impactstories from "./components/ImpactStories";
 import ProgressSection from "./pages/ProgressSection";
 import Supportour from "./components/Supportour";
 import FAQSection from "./pages/FAQSection";
+import FooterSection from "./pages/FooterSection";
 
 const App = () => {
   return (
@@ -35,6 +36,8 @@ const App = () => {
       <Supportour />
 
       <FAQSection />
+
+      <FooterSection />
     </div>
   );
 };
