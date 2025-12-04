@@ -1,5 +1,9 @@
 import React from "react";
+import { Routes, Route } from "react-router-dom";
+
 import Header from "./components/Header";
+import FooterSection from "./pages/FooterSection";
+
 import Home from "./pages/Home";
 import Getinvolved from "./components/GetInvolved";
 import Aboutus from "./components/Aboutus";
@@ -10,34 +14,39 @@ import Impactstories from "./components/ImpactStories";
 import ProgressSection from "./pages/ProgressSection";
 import Supportour from "./components/Supportour";
 import FAQSection from "./pages/FAQSection";
-import FooterSection from "./pages/FooterSection";
+
+import AbtDetailed from "./components/AboutDetailed";
 
 const App = () => {
   return (
-    <div className="min-h-screen w-full flex justify-start flex-col items-center font-inria  overflow-x-hidden">
-      {/* Header Page */}
+    <div className="min-h-screen w-full flex flex-col items-center font-inria overflow-x-hidden">
       <Header />
-      {/* Home Page */}
-      <Home />
-      {/* Get Involved Page */}
-      <Getinvolved />
-      {/* About us Page */}
-      <Aboutus />
-      {/* Key focus Page */}
-      <KeyFocus />
-      {/* impact Page */}
-      <Impactstories />\{/* team Page */}
-      <Team />
-      {/* Collab Page */}
-      <Collabrations />
-      {/* progress Page */}
-      <ProgressSection />
-      {/* support Page */}
-      <Supportour />
 
-      <FAQSection />
+      {/* Routing */}
+      <Routes>
+        {/* Home Page (All sections) */}
+        <Route
+          path="/Home"
+          element={
+            <>
+              <Home />
+              <Getinvolved />
+              <Aboutus />
+              <KeyFocus />
+              <Impactstories />
+              <Team />
+              <Collabrations />
+              <ProgressSection />
+              <Supportour />
+              <FAQSection />
+              <FooterSection />
+            </>
+          }
+        />
 
-      <FooterSection />
+        {/* About Detailed Page */}
+        <Route path="/Campaign" element={<AbtDetailed />} />
+      </Routes>
     </div>
   );
 };

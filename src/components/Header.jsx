@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import { HiOutlineMenu, HiX } from "react-icons/hi";
 import { motion } from "motion/react";
+import { Link } from "react-router";
 const Header = () => {
   const [open, setOpen] = useState(false);
 
@@ -17,13 +18,13 @@ const Header = () => {
         {/* Desktop Menu */}
         <ul className="hidden md:flex items-center gap-10 text-lg uppercase font-semibold">
           <li className="cursor-pointer hover:bg-gray-100 px-2 rounded">
-            <a href="#home">Home</a>
+            <Link to="/Home">Home</Link>
           </li>
           <li className="cursor-pointer hover:bg-gray-100 px-2 rounded">
-            <a href="#about-us">About Us</a>
+            <Link to="/About">About Us</Link>
           </li>
           <li className="cursor-pointer hover:bg-gray-100 px-2 rounded">
-            <a href="#campaign">Campaign</a>
+            <Link to="/Campaign">Campaign</Link>
           </li>
           <li className="cursor-pointer hover:bg-gray-100 px-2 rounded">
             <a href="#join-us">Join Us</a>
@@ -52,15 +53,16 @@ const Header = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden fixed top-20 left-0 w-full bg-white shadow-xl transition-all duration-300 ${
-          open ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-5 pointer-events-none"
-        }`}
+        className={`md:hidden fixed top-20 left-0 w-full bg-white shadow-xl transition-all duration-300 ${open ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-5 pointer-events-none"
+          }`}
       >
         <ul className="flex flex-col items-start gap-4 p-6 text-lg uppercase font-semibold">
-          <li onClick={() => setOpen(false)}><a href="#home">Home</a></li>
-          <li onClick={() => setOpen(false)}><a href="#about-us">About Us</a></li>
-          <li onClick={() => setOpen(false)}><a href="#campaign">Campaign</a></li>
-          <li onClick={() => setOpen(false)}><a href="#join-us">Join Us</a></li>
+          <Link><li onClick={() => setOpen(false)}><a href="#home">Home</a></li></Link>
+          <Link to="/About" onClick={() => setOpen(false)}>
+            <li>About Us</li>
+          </Link>
+          <Link><li onClick={() => setOpen(false)}><a href="#campaign">Campaign</a></li></Link>
+          <Link><li onClick={() => setOpen(false)}><a href="#join-us">Join Us</a></li></Link>
           <li className="flex items-center gap-1">
             More <IoIosArrowDown />
           </li>
