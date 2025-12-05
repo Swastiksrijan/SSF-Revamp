@@ -101,19 +101,19 @@ const Header = () => {
               <a href="#home">Home</a>
             </li>
           </Link>
-          <Link to="/About" onClick={() => setOpen(false)}>
+          <a href="#about" onClick={() => setOpen(false)}>
             <li>About Us</li>
-          </Link>
-          <Link>
+          </a>
+          <Link to={'/Campaign'}>
             <li onClick={() => setOpen(false)}>
-              <a href="#campaign">Campaign</a>
+              Campaign
             </li>
           </Link>
-          <Link>
+          <a href="#join-us">
             <li onClick={() => setOpen(false)}>
-              <a href="#join-us">Join Us</a>
+              join us
             </li>
-          </Link>
+          </a>
           <li onClick={()=>setValue(!value)} className="flex items-center gap-1">
             More <IoIosArrowDown />
           </li>
