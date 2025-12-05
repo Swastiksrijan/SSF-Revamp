@@ -14,7 +14,7 @@ import Impactstories from "./components/ImpactStories";
 import ProgressSection from "./pages/ProgressSection";
 import Supportour from "./components/Supportour";
 import FAQSection from "./pages/FAQSection";
-
+import ScrollToTop from "./components/Scrolltotop";
 import AbtDetailed from "./components/AboutDetailed";
 
 const App = () => {
@@ -22,6 +22,7 @@ const App = () => {
     <div className="min-h-screen w-full flex flex-col items-center font-inria overflow-x-hidden">
       <Header />
 
+      <ScrollToTop></ScrollToTop>
       {/* Routing */}
       <Routes>
         {/* Home Page (All sections) */}

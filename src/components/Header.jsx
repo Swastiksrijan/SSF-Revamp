@@ -89,95 +89,93 @@ const Header = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden fixed top-20 left-0 w-full bg-white shadow-xl transition-all duration-300 ${
-          open
+        className={`md:hidden fixed top-20 left-0 w-full bg-white shadow-xl transition-all duration-300 ${open
             ? "opacity-100 translate-y-0"
             : "opacity-0 -translate-y-5 pointer-events-none"
-        }`}
+          }`}
       >
         <ul className="flex flex-col items-start gap-4 p-6 text-lg uppercase font-semibold">
-          <Link>
-            <li onClick={() => setOpen(false)}>
-              <a href="#home">Home</a>
-            </li>
-          </Link>
+          <li onClick={() => setOpen(false)}>
+            <Link to={"/"}>Home</Link>
+          </li>
+
           <a href="#about" onClick={() => setOpen(false)}>
             <li>About Us</li>
           </a>
-          <Link to={'/Campaign'}>
-            <li onClick={() => setOpen(false)}>
-              Campaign
-            </li>
-          </Link>
-          <a href="#join-us">
-            <li onClick={() => setOpen(false)}>
-              join us
-            </li>
-          </a>
-          <li onClick={()=>setValue(!value)} className="flex items-center gap-1">
-            More <IoIosArrowDown />
+
+          <li onClick={() => setOpen(false)}>
+            <Link to={'/Campaign'}>Campaign</Link>
           </li>
 
-          {value && (
-            <div className="text-zinc-900 w-full">
-              <ul className="space-y-3 w-full">
-                <li className="flex gap-4  items-center bg-[#F1EFEF] hover:bg-blue-50 transition-all ease-in-out duration-300 px-3 text-sm py-1.5 w-full cursor-pointer">
-                  <img
-                    src="./images/money_box.png"
-                    alt="money box image"
-                    className="w-6"
-                  />
-                  <span>Donate & Support</span>
-                </li>
+        
+          <li onClick={() => setOpen(false)}>
+            <a href="#join-us">join us</a>
+          </li>
+        
+        <li onClick={() => setValue(!value)} className="flex items-center gap-1">
+          More <IoIosArrowDown />
+        </li>
 
-                <li className="flex  gap-4  items-center bg-[#F1EFEF] hover:bg-blue-50 transition-all ease-in-out duration-300 px-3 text-sm py-1.5 w-full cursor-pointer">
-                  <img
-                    src="./images/blog.png"
-                    alt="blog image"
-                    className="w-6"
-                  />
-                  <span>Blog</span>
-                </li>
+        {value && (
+          <div className="text-zinc-900 w-full">
+            <ul className="space-y-3 w-full">
+              <li className="flex gap-4  items-center bg-[#F1EFEF] hover:bg-blue-50 transition-all ease-in-out duration-300 px-3 text-sm py-1.5 w-full cursor-pointer">
+                <img
+                  src="./images/money_box.png"
+                  alt="money box image"
+                  className="w-6"
+                />
+                <span>Donate & Support</span>
+              </li>
 
-                <li className="flex gap-4  items-center bg-[#F1EFEF] hover:bg-blue-50 transition-all ease-in-out duration-300 px-3 text-sm py-1.5 w-full cursor-pointer">
-                  <img
-                    src="./images/gallery.png"
-                    alt="gallery image"
-                    className="w-6"
-                  />
-                  <span>Media Gallery</span>
-                </li>
+              <li className="flex  gap-4  items-center bg-[#F1EFEF] hover:bg-blue-50 transition-all ease-in-out duration-300 px-3 text-sm py-1.5 w-full cursor-pointer">
+                <img
+                  src="./images/blog.png"
+                  alt="blog image"
+                  className="w-6"
+                />
+                <span>Blog</span>
+              </li>
 
-                <li className="flex gap-4  items-center bg-[#F1EFEF] hover:bg-blue-50 transition-all ease-in-out duration-300 px-3 text-sm py-1.5 w-full cursor-pointer">
-                  <img
-                    src="./images/call.png"
-                    alt="contact image"
-                    className="w-6"
-                  />
-                  <span>Contact Us</span>
-                </li>
+              <li className="flex gap-4  items-center bg-[#F1EFEF] hover:bg-blue-50 transition-all ease-in-out duration-300 px-3 text-sm py-1.5 w-full cursor-pointer">
+                <img
+                  src="./images/gallery.png"
+                  alt="gallery image"
+                  className="w-6"
+                />
+                <span>Media Gallery</span>
+              </li>
 
-                <li className="flex gap-4  items-center bg-[#F1EFEF] hover:bg-blue-50 transition-all ease-in-out duration-300 px-3 text-sm py-1.5 w-full cursor-pointer">
-                  <img
-                    src="./images/analyze.png"
-                    alt="analyze image"
-                    className="w-6"
-                  />
-                  <span>Terms & Conditions</span>
-                </li>
-              </ul>
-            </div>
-          )}
+              <li className="flex gap-4  items-center bg-[#F1EFEF] hover:bg-blue-50 transition-all ease-in-out duration-300 px-3 text-sm py-1.5 w-full cursor-pointer">
+                <img
+                  src="./images/call.png"
+                  alt="contact image"
+                  className="w-6"
+                />
+                <span>Contact Us</span>
+              </li>
 
-          <button className="mt-4 w-full px-4 py-2 bg-[#005EFF] text-white hover:bg-black font-semibold text-lg relative group transition-all duration-200 ease-in cursor-pointer">
-            <a href="#">
-              Donate Now
-              <span className="absolute group-hover:translate-x-0 group-hover:translate-y-0 inset-0 bg-black translate-x-1.5 translate-y-1.5 -z-1 transition-all duration-200 ease-in"></span>
-            </a>
-          </button>
-        </ul>
-      </div>
+              <li className="flex gap-4  items-center bg-[#F1EFEF] hover:bg-blue-50 transition-all ease-in-out duration-300 px-3 text-sm py-1.5 w-full cursor-pointer">
+                <img
+                  src="./images/analyze.png"
+                  alt="analyze image"
+                  className="w-6"
+                />
+                <span>Terms & Conditions</span>
+              </li>
+            </ul>
+          </div>
+        )}
+
+        <button className="mt-4 w-full px-4 py-2 bg-[#005EFF] text-white hover:bg-black font-semibold text-lg relative group transition-all duration-200 ease-in cursor-pointer">
+          <a href="#">
+            Donate Now
+            <span className="absolute group-hover:translate-x-0 group-hover:translate-y-0 inset-0 bg-black translate-x-1.5 translate-y-1.5 -z-1 transition-all duration-200 ease-in"></span>
+          </a>
+        </button>
+      </ul>
     </div>
+    </div >
   );
 };
 

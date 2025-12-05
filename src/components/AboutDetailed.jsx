@@ -18,27 +18,28 @@ function AbtDetailed() {
                         Ensuring every child has access to quality education
                         and the tools they need to succeed.
                     </h2>
-                    <ul className="mt-6 space-y-4 text-[18px] text-gray-800">
-                        <li className="flex items-start gap-2">
-                            <IoIosCheckmarkCircle className="text-green-600 text-2xl" />
-                            Scholarships for underprivileged students
+                    <ul className="mt-6 space-y-3 md:space-y-4 text-[15px] md:text-[18px] text-gray-800">
+                        <li className="flex items-start gap-1 md:gap-2 leading-tight">
+                            <IoIosCheckmarkCircle className="text-green-600 text-lg md:text-2xl shrink-0" />
+                            <span>Scholarships for underprivileged students</span>
                         </li>
 
-                        <li className="flex items-start gap-2">
-                            <IoIosCheckmarkCircle className="text-green-600 text-2xl" />
-                            Distribution of books, uniforms, and learning materials
+                        <li className="flex items-start gap-1 md:gap-2 leading-tight">
+                            <IoIosCheckmarkCircle className="text-green-600 text-lg md:text-2xl shrink-0" />
+                            <span>Distribution of books, uniforms, and learning materials</span>
                         </li>
 
-                        <li className="flex items-start gap-2">
-                            <IoIosCheckmarkCircle className="text-green-600 text-2xl" />
-                            Mentorship and academic support programs
+                        <li className="flex items-start gap-1 md:gap-2 leading-tight">
+                            <IoIosCheckmarkCircle className="text-green-600 text-lg md:text-2xl shrink-0" />
+                            <span>Mentorship and academic support programs</span>
                         </li>
 
-                        <li className="flex items-start gap-2">
-                            <IoIosCheckmarkCircle className="text-green-600 text-2xl" />
-                            Initiatives to reduce school dropout rates
+                        <li className="flex items-start gap-1 md:gap-2 leading-tight">
+                            <IoIosCheckmarkCircle className="text-green-600 text-lg md:text-2xl shrink-0" />
+                            <span>Initiatives to reduce school dropout rates</span>
                         </li>
                     </ul>
+
                 </div>
                 <div className="flex justify-center">
                     <img
@@ -65,27 +66,28 @@ function AbtDetailed() {
                         Bringing healthcare within reach of every community member,
                         regardless of circumstance.
                     </h2>
-                    <ul className="mt-6 space-y-4 text-[18px] text-gray-800">
-                        <li className="flex items-start gap-2">
-                            <IoIosCheckmarkCircle className="text-green-600 text-2xl" />
-                            Free medical checkups and health camps
+                    <ul className="mt-6 space-y-3 md:space-y-4 text-[15px] md:text-[18px] text-gray-800">
+                        <li className="flex items-start gap-1 md:gap-2 leading-tight">
+                            <IoIosCheckmarkCircle className="text-green-600 text-lg md:text-2xl shrink-0" />
+                            <span>Free medical checkups and health camps</span>
                         </li>
 
-                        <li className="flex items-start gap-2">
-                            <IoIosCheckmarkCircle className="text-green-600 text-2xl" />
-                            Access to essential medicines and treatments
+                        <li className="flex items-start gap-1 md:gap-2 leading-tight">
+                            <IoIosCheckmarkCircle className="text-green-600 text-lg md:text-2xl shrink-0" />
+                            <span>Access to essential medicines and treatments</span>
                         </li>
 
-                        <li className="flex items-start gap-2">
-                            <IoIosCheckmarkCircle className="text-green-600 text-2xl" />
-                            Awareness programs on hygiene and disease prevention
+                        <li className="flex items-start gap-1 md:gap-2 leading-tight">
+                            <IoIosCheckmarkCircle className="text-green-600 text-lg md:text-2xl shrink-0" />
+                            <span>Awareness programs on hygiene and disease prevention</span>
                         </li>
 
-                        <li className="flex items-start gap-2">
-                            <IoIosCheckmarkCircle className="text-green-600 text-2xl" />
-                            Support for maternal and child healthcare
+                        <li className="flex items-start gap-1 md:gap-2 leading-tight">
+                            <IoIosCheckmarkCircle className="text-green-600 text-lg md:text-2xl shrink-0" />
+                            <span>Support for maternal and child healthcare</span>
                         </li>
                     </ul>
+
                 </div>
                 <div className="flex justify-center md:hidden">
                     <img
@@ -104,25 +106,25 @@ function AbtDetailed() {
                     <h2 className="text-2xl md:text-3xl font-bold mt-4 leading-snug">
                         Building stronger, self-sufficient rural communities through sustainable development.
                     </h2>
-                    <ul className="mt-6 space-y-4 text-[18px] text-gray-800">
-                        <li className="flex items-start gap-2">
-                            <IoIosCheckmarkCircle className="text-green-600 text-2xl" />
-                            Infrastructure improvements for villages
+                    <ul className="mt-6 space-y-3 md:space-y-4 text-[15px] md:text-[18px] text-gray-800">
+                        <li className="flex items-start gap-1 md:gap-2 leading-tight">
+                            <IoIosCheckmarkCircle className="text-green-600 text-lg md:text-2xl shrink-0" />
+                            <span>Infrastructure improvements for villages</span>
                         </li>
 
-                        <li className="flex items-start gap-2">
-                            <IoIosCheckmarkCircle className="text-green-600 text-2xl" />
-                            Skill-development & livelihood training
+                        <li className="flex items-start gap-1 md:gap-2 leading-tight">
+                            <IoIosCheckmarkCircle className="text-green-600 text-lg md:text-2xl shrink-0" />
+                            <span>Skill-development & livelihood training</span>
                         </li>
 
-                        <li className="flex items-start gap-2">
-                            <IoIosCheckmarkCircle className="text-green-600 text-2xl" />
-                            Women-led self-help group support
+                        <li className="flex items-start gap-1 md:gap-2 leading-tight">
+                            <IoIosCheckmarkCircle className="text-green-600 text-lg md:text-2xl shrink-0" />
+                            <span>Women-led self-help group support</span>
                         </li>
 
-                        <li className="flex items-start gap-2">
-                            <IoIosCheckmarkCircle className="text-green-600 text-2xl" />
-                            Programs promoting agriculture & local entrepreneurship
+                        <li className="flex items-start gap-1 md:gap-2 leading-tight">
+                            <IoIosCheckmarkCircle className="text-green-600 text-lg md:text-2xl shrink-0" />
+                            <span>Programs promoting agriculture & local entrepreneurship</span>
                         </li>
                     </ul>
                 </div>
@@ -151,27 +153,28 @@ function AbtDetailed() {
                         Empowering young individuals with practical skills to build
                         confident and independent futures.
                     </h2>
-                    <ul className="mt-6 space-y-4 text-[18px] text-gray-800">
-                        <li className="flex items-start gap-2">
-                            <IoIosCheckmarkCircle className="text-green-600 text-2xl" />
-                            Vocational and technical skill training
+                    <ul className="mt-6 space-y-3 md:space-y-4 text-[15px] md:text-[18px] text-gray-800">
+                        <li className="flex items-start gap-1 md:gap-2 leading-tight">
+                            <IoIosCheckmarkCircle className="text-green-600 text-lg md:text-2xl shrink-0" />
+                            <span>Vocational & technical skill training</span>
                         </li>
 
-                        <li className="flex items-start gap-2">
-                            <IoIosCheckmarkCircle className="text-green-600 text-2xl" />
-                            Career guidance and personality development
+                        <li className="flex items-start gap-1 md:gap-2 leading-tight">
+                            <IoIosCheckmarkCircle className="text-green-600 text-lg md:text-2xl shrink-0" />
+                            <span>Career guidance & personality development</span>
                         </li>
 
-                        <li className="flex items-start gap-2">
-                            <IoIosCheckmarkCircle className="text-green-600 text-2xl" />
-                            Workshops on communication & leadership
+                        <li className="flex items-start gap-1 md:gap-2 leading-tight">
+                            <IoIosCheckmarkCircle className="text-green-600 text-lg md:text-2xl shrink-0" />
+                            <span>Communication & leadership workshops</span>
                         </li>
 
-                        <li className="flex items-start gap-2">
-                            <IoIosCheckmarkCircle className="text-green-600 text-2xl" />
-                            Employment readiness and job support
+                        <li className="flex items-start gap-1 md:gap-2 leading-tight">
+                            <IoIosCheckmarkCircle className="text-green-600 text-lg md:text-2xl shrink-0" />
+                            <span>Job readiness training & employment support</span>
                         </li>
                     </ul>
+
                 </div>
                 <div className="flex justify-center md:hidden">
                     <img
@@ -192,27 +195,28 @@ function AbtDetailed() {
                         Promoting healthier communities through education,
                         prevention, and accessible health knowledge.
                     </h2>
-                    <ul className="mt-6 space-y-4 text-[18px] text-gray-800">
-                        <li className="flex items-start gap-2">
-                            <IoIosCheckmarkCircle className="text-green-600 text-2xl" />
-                            Awareness sessions on hygiene and nutrition
+                    <ul className="mt-6 space-y-3 md:space-y-4 text-[15px] md:text-[18px] text-gray-800">
+                        <li className="flex items-start gap-1 md:gap-2 leading-tight">
+                            <IoIosCheckmarkCircle className="text-green-600 text-lg md:text-2xl shrink-0" />
+                            <span>Awareness sessions on hygiene and nutrition</span>
                         </li>
 
-                        <li className="flex items-start gap-2">
-                            <IoIosCheckmarkCircle className="text-green-600 text-2xl" />
-                            Disease prevention and first-aid workshops
+                        <li className="flex items-start gap-1 md:gap-2 leading-tight">
+                            <IoIosCheckmarkCircle className="text-green-600 text-lg md:text-2xl shrink-0" />
+                            <span>Disease prevention and first-aid workshops</span>
                         </li>
 
-                        <li className="flex items-start gap-2">
-                            <IoIosCheckmarkCircle className="text-green-600 text-2xl" />
-                            Mental health and wellness guidance
+                        <li className="flex items-start gap-1 md:gap-2 leading-tight">
+                            <IoIosCheckmarkCircle className="text-green-600 text-lg md:text-2xl shrink-0" />
+                            <span>Mental health and wellness guidance</span>
                         </li>
 
-                        <li className="flex items-start gap-2">
-                            <IoIosCheckmarkCircle className="text-green-600 text-2xl" />
-                            Family and community health counseling
+                        <li className="flex items-start gap-1 md:gap-2 leading-tight">
+                            <IoIosCheckmarkCircle className="text-green-600 text-lg md:text-2xl shrink-0" />
+                            <span>Family and community health counseling</span>
                         </li>
                     </ul>
+
                 </div>
                 <div className="flex justify-center">
                     <img
@@ -236,30 +240,31 @@ function AbtDetailed() {
                         Homeless Support
                     </span>
                     <h2 className="text-2xl md:text-3xl font-bold mt-4 leading-snug">
-                       Providing care and essential support to individuals
-                       facing homelessness and hardship.
+                        Providing care and essential support to individuals
+                        facing homelessness and hardship.
                     </h2>
-                    <ul className="mt-6 space-y-4 text-[18px] text-gray-800">
-                        <li className="flex items-start gap-2">
-                            <IoIosCheckmarkCircle className="text-green-600 text-2xl" />
-                            Food, clothing, and essential relief distribution
+                    <ul className="mt-6 space-y-3 md:space-y-4 text-[15px] md:text-[18px] text-gray-800">
+                        <li className="flex items-start gap-1 md:gap-2 leading-tight">
+                            <IoIosCheckmarkCircle className="text-green-600 text-lg md:text-2xl shrink-0" />
+                            <span>Food, clothing, and essential relief distribution</span>
                         </li>
 
-                        <li className="flex items-start gap-2">
-                            <IoIosCheckmarkCircle className="text-green-600 text-2xl" />
-                            Temporary assistance for vulnerable families
+                        <li className="flex items-start gap-1 md:gap-2 leading-tight">
+                            <IoIosCheckmarkCircle className="text-green-600 text-lg md:text-2xl shrink-0" />
+                            <span>Temporary assistance for vulnerable families</span>
                         </li>
 
-                        <li className="flex items-start gap-2">
-                            <IoIosCheckmarkCircle className="text-green-600 text-2xl" />
-                            Community outreach and support drives
+                        <li className="flex items-start gap-1 md:gap-2 leading-tight">
+                            <IoIosCheckmarkCircle className="text-green-600 text-lg md:text-2xl shrink-0" />
+                            <span>Community outreach and support drives</span>
                         </li>
 
-                        <li className="flex items-start gap-2">
-                            <IoIosCheckmarkCircle className="text-green-600 text-2xl" />
-                            Programs fostering safety, care, and dignity
+                        <li className="flex items-start gap-1 md:gap-2 leading-tight">
+                            <IoIosCheckmarkCircle className="text-green-600 text-lg md:text-2xl shrink-0" />
+                            <span>Programs fostering safety, care, and dignity</span>
                         </li>
                     </ul>
+
                 </div>
                 <div className="flex justify-center md:hidden">
                     <img
