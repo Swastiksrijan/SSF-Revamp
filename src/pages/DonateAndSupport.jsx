@@ -2,25 +2,25 @@ import GroupedImg from "../components/GroupedImg";
 
 const DonateAndSupport = () => {
   return (
-    <div className="min-h-screen w-full">
+    <div className="min-h-screen w-full pb-10">
       <div
         className="wrapper max-w-6xl mx-auto mt-28 mb-4
        p-4 lg:p-0 flex flex-col gap-10 items-center justify-center"
       >
-        <h1 className="font-black text-4xl text-center">
+        <h1 className="font-black text-4xl text-center pt-4">
           Why <span className="text-blue-500">Donate</span> Us ?
         </h1>
 
         {/* hero Image with content */}
-        <div className="main_content w-full grid lg:grid-cols-2 text-center lg:text-start">
-          <div className="flex items-center justify-center lg:justify-start">
-            <GroupedImg />
+        <div className="main_content w-full gap-6 grid lg:grid-cols-2 text-center lg:text-start">
+          <div className="flex items-center justify-center lg:justify-center">
+            <img src="/images/donateLeftImg.svg" alt="donate img" />
           </div>
           <div className="text py-4 space-y-4">
-            <h4 className="font-bold text-2xl">
+            <h4 className="font-bold text-3xl">
               Here’s why your support matters:
             </h4>
-            <p className="">
+            <p className="md:text-[17px] text-sm">
               “We are a certified and trustworthy NGO, registered under 12A and
               80G to ensure full transparency, ethical operations, and
               tax-deductible donations. Every rupee is used responsibly, and we
@@ -39,7 +39,7 @@ const DonateAndSupport = () => {
         </div>
 
         {/* Two cards Container */}
-        <div className="card_container w-full grid lg:grid-cols-2 gap-20">
+        <div className="card_container w-full grid lg:grid-cols-2 gap-20 pt-10">
           <div className="w-full bg-zinc-100 border rounded-xs border-zinc-500 hover:scale-105 p-4 space-y-4 shadow-[5px_5px_0px_#333] hover:shadow-[0px_0px_0px_#fff] duration-200 transition-all ease-in-out">
             <h3 className="text-3xl font-bold tracking-wide">WHAT IS <span className="text-blue-500">12A ?</span> </h3>
             <p>12A Registration Recognizes us as a verified non-profit and ensures your contributions go directly toward genuine charitable work.</p>
@@ -52,9 +52,9 @@ const DonateAndSupport = () => {
         </div>
 
         {/* Donate Button with dotted line */}
-        <div className="relative w-full min-h-20 my-6 flex items-center justify-center">
+        <div className="relative w-full min-h-20 my-6 px-3 flex items-center justify-center">
           <img src="./images/dotted_line.png" alt="" />
-          <button className="absolute text-white bg-[#005EFF] px-30 py-4 cursor-pointer active:scale-95 shadow-[5px_5px_0px_#333] hover:shadow-[0px_0px_0px_#fff] duration-300 transition-all ease-in-out text-xl tracking-wide font-bold">Donate</button>
+          <button className="absolute text-white bg-[#005EFF] px-30 py-4  cursor-pointer active:scale-95 shadow-[5px_5px_0px_#333] hover:bg-black hover:shadow-[0px_0px_0px_#fff] duration-300 transition-all ease-in-out text-xl md:text-2xl tracking-wide font-bold">Donate</button>
         </div>
 
       </div>
