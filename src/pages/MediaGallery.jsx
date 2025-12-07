@@ -262,15 +262,17 @@ export default function MediaGallery() {
     },
   ];
   return (
-    <div className="w-full min-h-screen">
+    <div className="w-full min-h-screen ">
       <div className="wrapper max-w-6xl mx-auto my-24 p-4 xl:p-2">
+         <h1 className="text-neutral-950 text-center text-2xl md:text-4xl italic font-semibold pt-4 pb-10">Glimpses of our Achievements:</h1>
         {/* Masonry Grid Container */}
-        <div className="masonry_grid columns-1 md:columns-2 gap-10 space-y-10">
+        <div className="masonry_grid columns-2 md:columns-3 gap-4 md:gap-10 space-y-4 md:space-y-10">
+
           {ImgData.map((data) => {
             return (
               <div
                 key={data.id}
-                className="break-inside-avoid overflow-hidden rounded-4xl drop-shadow-2xl border-zinc-400 border-2 hover:scale-[1.03] transition-all ease-in-out duration-300"
+                className="break-inside-avoid overflow-hidden drop-shadow-neutral-300 bg-neutral-50 p-2 pb-12  drop-shadow-2xl border-zinc-400  hover:scale-[1.03] transition-all ease-in-out duration-300"
               >
                 <img
                   src={data.src}
