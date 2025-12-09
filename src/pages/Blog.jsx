@@ -8,12 +8,11 @@ export default function Blog() {
   const BLOG_ID = import.meta.env.VITE_BLOG_ID;
   const API_KEY = import.meta.env.VITE_BLOGGER_API_KEY;
 
-
-
   useEffect(() => {
     async function fetchPosts() {
       if (!BLOG_ID || !API_KEY) {
-        const msg = "Error: Blog ID or API Key is missing in your environment variables.";
+        const msg =
+          "Error: Blog ID or API Key is missing in your environment variables.";
         console.error(msg);
         setError(msg);
         setLoading(false);
@@ -33,7 +32,8 @@ export default function Blog() {
         console.log("API Response:", data);
 
         if (!data.items || data.items.length === 0) {
-          const msg = "No posts found. Check if the blog is public and has published posts.";
+          const msg =
+            "No posts found. Check if the blog is public and has published posts.";
           console.warn(msg);
           setError(msg);
         } else {
@@ -53,27 +53,17 @@ export default function Blog() {
   }, []);
 
   if (loading)
-    return (
-      <p className="text-center text-2xl pt-40">
-        Loading Blogs...
-      </p>
-    );
+    return <p className="text-center text-2xl pt-40">Loading Blogs...</p>;
 
-  if (error)
-    return (
-      <p className="text-center text-red-500 py-20">
-        {error}
-      </p>
-    );
+  if (error) return <p className="text-center text-red-500 py-20">{error}</p>;
 
   const sortedPosts = [...posts].sort(
     (a, b) => new Date(b.published) - new Date(a.published)
   );
 
   return (
-    <div className="w-full flex flex-col items-center justify-center py-14 px-4 mt-10 gap-10">
-
-      <div className="text-center">
+    <div className="w-full bg-neutral-100 flex flex-col items-center justify-center py-14  mt-20 gap-10">
+      <div className="text-center px-4">
         <h2 className="font-extrabold text-5xl">
           Grow, Learn, and Stay Inspired
         </h2>
@@ -87,19 +77,23 @@ export default function Blog() {
         </p>
       </div>
 
-      <p className="text-lg font-bold w-full max-w-6xl ">Latest Blogs</p>
-
-      <div className="w-full max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+      <p className="text-lg font-bold w-full max-w-6xl px-4 -mb-6">Latest Blogs:</p>
+      <div className="w-full max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 px-4">
         {sortedPosts.slice(0, 2).map((post) => (
           <BlogCard key={post.id} post={post} big />
         ))}
       </div>
-      <div className="w-full bg-blue-400 pb-30 mt-10 pt-15 overflow-hidden">
-        <p className="text-lg font-bold w-full ml-6 md:ml-6 lg:ml-40 pb-8">Read All Other Blogs</p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 px-6 md:px-6 lg:px-40 ">
-          {sortedPosts.slice(2).map((post) => (
-            <BlogCard key={post.id} post={post} />
-          ))}
+      <div className="w-full flex justify-center items-center ">
+        {/* all cards  */}
+        <div className="w-full  max-w-6xl px-4">
+          <p className="text-lg pt-10 pb-4 font-semibold">
+            Read All Other Blogs:
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14 ">
+            {sortedPosts.slice(2).map((post) => (
+              <BlogCard key={post.id} post={post} />
+            ))}
+          </div>
         </div>
       </div>
     </div>
@@ -112,26 +106,26 @@ function BlogCard({ post, big }) {
 
   return (
     <div
-      className={`bg-white shadow-[4px_4px_0px_#665e5e] hover:shadow-[6px_6px_0px_#808080] transition-all duration-300 overflow-hidden border ${big ? "h-auto" : ""
-        }`}
+      className={`bg-white shadow-[6px_6px_0px_#595959]  transition-all duration-300 overflow-hidden border ${
+        big ? "h-auto" : ""
+      }`}
     >
-      {image ? (
-        <img
-          src={image}
-          alt={post.title}
-          className="h-48 w-full object-cover"
-        />
-      ) : (
-        <div className="h-48 w-full bg-gray-200 flex items-center justify-center text-gray-400 text-sm">
-          No Image
-        </div>
-      )}
-
-      <div className="p-4">
-        <p className="text-xs bg-blue-100 text-blue-700 inline-block px-2 py-1 rounded-md mb-2">
+      <div className="p-4 flex flex-col items-start gap-1">
+        {image ? (
+          <img
+            src={image}
+            alt={post.title}
+            className="h-58 w-full object-cover mb-2 border-1 rounded-xl"
+          />
+        ) : (
+          <div className="h-48 w-full bg-gray-200 flex items-center  justify-center text-gray-400 text-sm">
+            No Image
+          </div>
+        )}
+        <p className="text-xs  inline-block  py-1 rounded-md mb-2">
           {new Date(post.published).toLocaleDateString()}
         </p>
-        <h2 className="text-lg font-semibold line-clamp-2 mb-2">
+        <h2 className="text-2xl font-semibold line-clamp-2 mb-2">
           {post.title || "Untitled Post"}
         </h2>
         <p className="text-gray-600 text-sm line-clamp-3">
@@ -141,9 +135,11 @@ function BlogCard({ post, big }) {
           href={post.url || "#"}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-4 inline-block text-sm font-semibold text-blue-600 hover:text-blue-900"
+          className="mt-4 inline-block text-lg font-regular  "
         >
-          <span className="inline-block bg-yellow-300 p-2">Read More →</span>
+          <span className=" bg-yellow-300  hover:rounded-4xl hover:border-2 border-2 border-transparent hover:border-yellow-300 hover:bg-yellow-50 transition-all duration-300 px-3 py-1 flex items-center gap-2">
+            Read More <img src="images/Left.svg" alt="arrow" className="w-6" />
+          </span>
         </a>
       </div>
     </div>
