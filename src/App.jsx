@@ -19,6 +19,7 @@ import AbtDetailed from "./components/AboutDetailed";
 import DonateAndSupport from "./pages/DonateAndSupport";
 import Blog from "./pages/Blog";
 import MediaGallery from "./pages/MediaGallery";
+import Contact from "./pages/Contact";
 
 const App = () => {
   return (
@@ -84,6 +85,16 @@ const App = () => {
         element={
           <>
           <MediaGallery />
+          <FooterSection/>
+          </>
+        }
+        />
+        {/* Contact Us*/}
+         <Route
+        path="/Contact"
+        element={
+          <>
+          <Contact />
           <FooterSection/>
           </>
         }
