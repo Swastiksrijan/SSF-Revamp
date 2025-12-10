@@ -2,7 +2,7 @@ import React from 'react';
 
 const teamMembers = [
   { name: "Ms. A. Gincy George", position: "Head-Counselling & Community Well-Being (Pan-India)", img: "./Teams_Images/image_1.jpg" },
-  { name: "Ramesh Pandey", position: "Founder & President", img: "./Teams_Images/image_2.png" },
+  { name: "Ramesh Pandey", position: "Founder & President", img: "./Teams_Images/image_2.jpg" },
   { name: "Naresh Kumar", position: "President - Faridabad Wing", img: "./Teams_Images/image_3.jpg" },
   { name: "Dhiraj Kumar", position: "Pune President", img: "./Teams_Images/image_4.png" },
   { name: "Ms. M D Pavanethra", position: "Volunteer", img: "./Teams_Images/image_5.jpg" },
