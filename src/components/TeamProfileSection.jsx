@@ -7,7 +7,6 @@ const teamMembers = [
   { name: "Dhiraj Kumar", position: "Pune President", img: "./Teams_Images/image_4.png" },
   { name: "Ms. M D Pavanethra", position: "Volunteer", img: "./Teams_Images/image_5.jpg" },
   { name: "Ayushi Tyagi", position: "Volunteer - GZB", img: "./Teams_Images/image_6.jpg" },
-  { name: "Vidushi Pal", position: "Volunteer", img: "./Teams_Images/image_7.jpg" },
   { name: "Krishna Kumar", position: "Volunteer - Advisor", img: "./Teams_Images/image_8.jpg" },
   { name: "Raji P Alex", position: "Advisory Board", img: "./Teams_Images/image_9.jpg" },
   { name: "Rajeev Pandey", position: "Supporter Advisor Volunteer", img: "./Teams_Images/image_10.jpg" },
@@ -43,9 +42,9 @@ export default function TeamSection() {
         .scroll-container {
           animation: scroll 40s linear infinite;
         }
-        
+
       `}</style>
-      
+
       <div className="w-full min-h-[70vh] flex items-center justify-center overflow-hidden">
         <div className="flex gap-6 md:gap-8 scroll-container">
           {duplicatedMembers.map((member, idx) => (
@@ -56,10 +55,10 @@ export default function TeamSection() {
               }`}
             >
               <div className="w-32 h-32 md:w-52 md:h-52 rounded-full overflow-hidden border-4 border-white shadow-lg">
-                <img 
-                  src={member.img} 
+                <img
+                  src={member.img}
                   alt={member.name}
-                  className="w-full h-full object-cover" 
+                  className="w-full h-full object-cover"
                 />
               </div>
               <h3 className="font-semibold text-lg mt-3">{member.name}</h3>
