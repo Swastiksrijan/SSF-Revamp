@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import { HiOutlineMenu, HiX } from "react-icons/hi";
+import {motion} from "framer-motion";
 import { Link } from "@tanstack/react-router";
 import {
   HiOutlineCash,
@@ -19,6 +20,12 @@ const Header = () => {
     setValue(false);
   };
 
+  const [position, setPosition] = useState({
+    left: 0,
+    width: 0,
+    opacity: 0,
+  })
+
   return (
     <div className="fixed top-0 left-0 right-0 z-20 flex justify-center bg-white/60 backdrop-blur-lg border-b-2 border-neutral-200">
       <div className="w-6xl flex items-center justify-between h-20 px-4 xl:px-0">
@@ -28,45 +35,111 @@ const Header = () => {
         </Link>
 
         {/* Desktop Menu */}
-        <ul className="hidden relative md:flex items-center  lg:gap-10 text-lg uppercase font-semibold">
-          <li>
-            <Link to="/" className="hover:bg-gray-300 px-2 rounded">
+        <ul 
+          onMouseLeave={() => {
+            setPosition((prev) => ({
+              ...prev,
+              opacity: 0,
+            }))
+          }}
+          className="hidden relative md:flex items-center text-lg uppercase font-semibold"
+        >
+          <li 
+          onMouseEnter={(e) => {
+            const {width} = e.currentTarget.getBoundingClientRect();
+
+            setPosition({
+              width,
+              opacity: 1,
+              left: e.currentTarget.offsetLeft,
+            })
+          }}
+          className="relative z-10 text-white mix-blend-difference block cursor-pointer px-6 py-1.5">
+            <Link to="/" className="">
               Home
             </Link>
           </li>
 
-          <li>
+          <li 
+          onMouseEnter={(e) => {
+            const {width} = e.currentTarget.getBoundingClientRect();
+
+            setPosition({
+              width,
+              opacity: 1,
+              left: e.currentTarget.offsetLeft,
+            })
+          }}
+          className="relative z-10 text-white mix-blend-difference block cursor-pointer px-6 py-1.5">
             <Link
               to="/"
               hash="about"
-              className="hover:bg-gray-300 px-2 rounded"
+              className=""
             >
               About Us
             </Link>
           </li>
 
-          <li>
+          <li 
+          onMouseEnter={(e) => {
+            const {width} = e.currentTarget.getBoundingClientRect();
+
+            setPosition({
+              width,
+              opacity: 1,
+              left: e.currentTarget.offsetLeft,
+            })
+          }}
+          className="relative z-10 text-white mix-blend-difference block cursor-pointer px-6 py-1.5">
             <Link
               to="/"
               hash="join-us"
-              className="hover:bg-gray-300 px-2 rounded"
+              className=""
             >
               Join Us
             </Link>
           </li>
 
-          <li>
-            <Link to="/Campaign" className="hover:bg-gray-300 px-2 rounded">
+          <li 
+          onMouseEnter={(e) => {
+            const {width} = e.currentTarget.getBoundingClientRect();
+
+            setPosition({
+              width,
+              opacity: 1,
+              left: e.currentTarget.offsetLeft,
+            })
+          }}
+          className="relative z-10 text-white mix-blend-difference block cursor-pointer px-6 py-1.5">
+            <Link to="/Campaign" className="">
               Campaign
             </Link>
           </li>
 
-          <li
+          <li 
+            onMouseEnter={(e) => {
+              const {width} = e.currentTarget.getBoundingClientRect();
+
+              setPosition({
+                width,
+                opacity: 1,
+                left: e.currentTarget.offsetLeft,
+              })
+            }}
             onClick={() => setValue(!value)}
-            className="flex items-center gap-1 cursor-pointer hover:bg-gray-300 px-2 rounded"
+            className="relative z-10 py-1.5 text-white mix-blend-difference flex items-center gap-1 cursor-pointer px-6"
           >
             More <IoIosArrowDown />
           </li>
+
+          <motion.li 
+          animate={position}
+          transition={{
+            type: "spring",
+            stiffness: 500,
+            damping: 30
+          }}
+          className="absolute z-0 h-7 rounded-full bg-black md:h-12"></motion.li>
 
           {/* Dropdown */}
           {value && (
