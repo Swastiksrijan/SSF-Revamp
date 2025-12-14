@@ -8,7 +8,7 @@ import { Link, Links } from "react-router";
 const Header = () => {
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState(false);
-  const closeWhenClicked = ()=>{
+  const closeWhenClicked = () => {
     setOpen(false)
   }
   return (
@@ -75,13 +75,30 @@ const Header = () => {
           )}
         </ul>
 
-        {/* Desktop Donate Button */}
-        <button className="hidden md:block px-4 py-2 bg-[#005EFF] text-white hover:bg-black font-semibold text-lg relative group transition-all duration-200 ease-in cursor-pointer">
-          <a href="https://pages.razorpay.com/pl_NCiTn7wnBOJFYG/view" target="_blank">
+        <div className="flex gap-4 w-full md:flex-row md:justify-center md:w-auto">
+          <button>
+          <a
+            href="https://pages.razorpay.com/pl_NCiTn7wnBOJFYG/view"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden md:inline-block px-5 py-2 bg-[#005EFF] text-white hover:bg-black font-semibold text-lg relative group transition-all duration-200 ease-in cursor-pointer"
+          >
             Donate Now
-            <span className="absolute group-hover:translate-x-0 group-hover:translate-y-0 inset-0 bg-black translate-x-1.5 translate-y-1.5 -z-1 transition-all duration-200 ease-in"></span>
+            <span className="absolute inset-0 bg-black translate-x-1.5 translate-y-1.5 -z-10 group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-200 ease-in"></span>
           </a>
-        </button>
+          </button>
+          <button>
+          <a
+            href="https://pages.razorpay.com/pl_NCiTn7wnBOJFYG/view"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden md:inline-block px-5 py-2 border-2 border-yellow-300 hover:border-0 bg-white text-zinc-600 hover:text-yellow-300 hover:bg-black font-semibold text-lg relative group transition-all duration-200 ease-in cursor-pointer"
+          >
+            Apply
+            <span className="absolute inset-0 bg-white border-2 border-black translate-x-1.5 translate-y-1.5 -z-10 group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-200 ease-in"></span>
+          </a>
+          </button>
+        </div>
 
         {/* Mobile Hamburger */}
         <button className="md:hidden text-3xl" onClick={() => setOpen(!open)}>
@@ -92,8 +109,8 @@ const Header = () => {
       {/* Mobile Menu */}
       <div
         className={`md:hidden fixed top-20 left-0 w-full bg-white shadow-xl transition-all duration-300 ${open
-            ? "opacity-100 translate-y-0"
-            : "opacity-0 -translate-y-5 pointer-events-none"
+          ? "opacity-100 translate-y-0"
+          : "opacity-0 -translate-y-5 pointer-events-none"
           }`}
       >
         <ul className="flex flex-col items-start gap-4 p-6 text-lg uppercase font-semibold">
@@ -114,69 +131,75 @@ const Header = () => {
             <a href="#join-us">join us</a>
           </li>
 
-        <li onClick={() => setValue(!value)} className="flex items-center gap-1">
-          More <IoIosArrowDown />
-        </li>
+          <li onClick={() => setValue(!value)} className="flex items-center gap-1">
+            More <IoIosArrowDown />
+          </li>
 
-        {value && (
-          <div className="text-zinc-900 w-full">
-            <ul className="space-y-3 w-full">
-              <Link onClick={closeWhenClicked} to={'/DonateAndSupport'} className="flex gap-4  items-center bg-[#F1EFEF] hover:bg-blue-50 transition-all ease-in-out duration-300 px-3 text-sm py-1.5 w-full cursor-pointer">
-                <img
-                  src="./images/money_box.png"
-                  alt="money box image"
-                  className="w-6"
-                />
-                <span>Donate & Support</span>
-              </Link>
+          {value && (
+            <div className="text-zinc-900 w-full">
+              <ul className="space-y-3 w-full">
+                <Link onClick={closeWhenClicked} to={'/DonateAndSupport'} className="flex gap-4  items-center bg-[#F1EFEF] hover:bg-blue-50 transition-all ease-in-out duration-300 px-3 text-sm py-1.5 w-full cursor-pointer">
+                  <img
+                    src="./images/money_box.png"
+                    alt="money box image"
+                    className="w-6"
+                  />
+                  <span>Donate & Support</span>
+                </Link>
 
-              <Link onClick={closeWhenClicked} to={'/Blog'} className="flex  gap-4  items-center bg-[#F1EFEF] hover:bg-blue-50 transition-all ease-in-out duration-300 px-3 text-sm py-1.5 w-full cursor-pointer">
-                <img
-                  src="./images/blog.png"
-                  alt="blog image"
-                  className="w-6"
-                />
-                <span>Blog</span>
-              </Link>
+                <Link onClick={closeWhenClicked} to={'/Blog'} className="flex  gap-4  items-center bg-[#F1EFEF] hover:bg-blue-50 transition-all ease-in-out duration-300 px-3 text-sm py-1.5 w-full cursor-pointer">
+                  <img
+                    src="./images/blog.png"
+                    alt="blog image"
+                    className="w-6"
+                  />
+                  <span>Blog</span>
+                </Link>
 
-              <Link onClick={closeWhenClicked} to={'/Media'} className="flex gap-4  items-center bg-[#F1EFEF] hover:bg-blue-50 transition-all ease-in-out duration-300 px-3 text-sm py-1.5 w-full cursor-pointer">
-                <img
-                  src="./images/gallery.png"
-                  alt="gallery image"
-                  className="w-6"
-                />
-                <span>Media Gallery</span>
-              </Link>
+                <Link onClick={closeWhenClicked} to={'/Media'} className="flex gap-4  items-center bg-[#F1EFEF] hover:bg-blue-50 transition-all ease-in-out duration-300 px-3 text-sm py-1.5 w-full cursor-pointer">
+                  <img
+                    src="./images/gallery.png"
+                    alt="gallery image"
+                    className="w-6"
+                  />
+                  <span>Media Gallery</span>
+                </Link>
 
-              <Link onClick={closeWhenClicked} to={'/Contact'} className="flex gap-4  items-center bg-[#F1EFEF] hover:bg-blue-50 transition-all ease-in-out duration-300 px-3 text-sm py-1.5 w-full cursor-pointer">
-                <img
-                  src="./images/call.png"
-                  alt="contact image"
-                  className="w-6"
-                />
-                <span>Contact Us</span>
-              </Link>
+                <Link onClick={closeWhenClicked} to={'/Contact'} className="flex gap-4  items-center bg-[#F1EFEF] hover:bg-blue-50 transition-all ease-in-out duration-300 px-3 text-sm py-1.5 w-full cursor-pointer">
+                  <img
+                    src="./images/call.png"
+                    alt="contact image"
+                    className="w-6"
+                  />
+                  <span>Contact Us</span>
+                </Link>
 
-              <Link onClick={closeWhenClicked} to={'/TermsAndCondition'} className="flex gap-4  items-center bg-[#F1EFEF] hover:bg-blue-50 transition-all ease-in-out duration-300 px-3 text-sm py-1.5 w-full cursor-pointer">
-                <img
-                  src="./images/analyze.png"
-                  alt="analyze image"
-                  className="w-6"
-                />
-                <span>Terms & Conditions</span>
-              </Link>
-            </ul>
-          </div>
-        )}
+                <Link onClick={closeWhenClicked} to={'/TermsAndCondition'} className="flex gap-4  items-center bg-[#F1EFEF] hover:bg-blue-50 transition-all ease-in-out duration-300 px-3 text-sm py-1.5 w-full cursor-pointer">
+                  <img
+                    src="./images/analyze.png"
+                    alt="analyze image"
+                    className="w-6"
+                  />
+                  <span>Terms & Conditions</span>
+                </Link>
+              </ul>
+            </div>
+          )}
 
-        <button className="mt-4 w-full px-4 py-2 bg-[#005EFF] text-white hover:bg-black font-semibold text-lg relative group transition-all duration-200 ease-in cursor-pointer">
-          <a href="https://pages.razorpay.com/pl_NCiTn7wnBOJFYG/view" target="_blank">
-            Donate Now
-            <span className="absolute group-hover:translate-x-0 group-hover:translate-y-0 inset-0 bg-black translate-x-1.5 translate-y-1.5 -z-1 transition-all duration-200 ease-in"></span>
-          </a>
-        </button>
-      </ul>
-    </div>
+          <button className="mt-4 w-full px-4 py-2 bg-[#005EFF] text-white hover:bg-black font-semibold text-lg relative group transition-all duration-200 ease-in cursor-pointer">
+            <a href="https://pages.razorpay.com/pl_NCiTn7wnBOJFYG/view" target="_blank">
+              Donate Now
+              <span className="absolute group-hover:translate-x-0 group-hover:translate-y-0 inset-0 bg-black translate-x-1.5 translate-y-1.5 -z-1 transition-all duration-200 ease-in"></span>
+            </a>
+          </button>
+          <button className="mt-4 w-full px-4 py-2 bg-white border-2 border-yellow-300 hover:border-0 text-zinc-700 hover:bg-black font-semibold text-lg relative group transition-all duration-200 ease-in cursor-pointer">
+            <a href="https://pages.razorpay.com/pl_NCiTn7wnBOJFYG/view" target="_blank">
+              Apply
+              <span className="absolute group-hover:translate-x-0 group-hover:translate-y-0 inset-0 bg-white border-2 translate-x-1.5 translate-y-1.5 -z-1 transition-all duration-200 ease-in"></span>
+            </a>
+          </button>
+        </ul>
+      </div>
     </div >
   );
 };
