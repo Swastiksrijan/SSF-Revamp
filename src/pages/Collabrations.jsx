@@ -7,7 +7,7 @@ export default function Collabrations() {
 
         <div className="text-center space-y-2 my-10">
           <h1 className="italic font-extrabold text-4xl">Our Collabrations</h1>
-          <p className="font-bold text-zinc-400">
+          <p className="font-bold text-zinc-400 px-4">
             we aim to empower communities through collaboration  and extend our reach
           </p>
         </div>
