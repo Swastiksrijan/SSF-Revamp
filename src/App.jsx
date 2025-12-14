@@ -21,6 +21,9 @@ import Blog from "./pages/Blog";
 import MediaGallery from "./pages/MediaGallery";
 import Contact from "./pages/Contact";
 import TermsAndCondition from "./pages/TermsAndCondtion";
+import Volunteer from "./pages/Volunteer";
+import Members from "./pages/Members";
+import LearningHub from "./pages/LearningHub";
 
 const App = () => {
   return (
@@ -62,54 +65,82 @@ const App = () => {
         />
         {/* donate and support */}
         <Route
-        path="/DonateAndSupport"
-        element={
-          <>
-          <DonateAndSupport/>
-          <FooterSection/>
-          </>
-        }
+          path="/DonateAndSupport"
+          element={
+            <>
+              <DonateAndSupport />
+              <FooterSection />
+            </>
+          }
         />
         {/* Blog */}
-         <Route
-        path="/Blog"
-        element={
-          <>
-          <Blog/>
-          <FooterSection/>
-          </>
-        }
+        <Route
+          path="/Blog"
+          element={
+            <>
+              <Blog />
+              <FooterSection />
+            </>
+          }
         />
         {/* Media Gallery */}
-         <Route
-        path="/Media"
-        element={
-          <>
-          <MediaGallery />
-          <FooterSection/>
-          </>
-        }
+        <Route
+          path="/Media"
+          element={
+            <>
+              <MediaGallery />
+              <FooterSection />
+            </>
+          }
         />
         {/* Contact Us*/}
-         <Route
-        path="/Contact"
-        element={
-          <>
-          <Contact />
-          <FooterSection/>
-          </>
-        }
-
+        <Route
+          path="/Contact"
+          element={
+            <>
+              <Contact />
+              <FooterSection />
+            </>
+          }
         />
         <Route
-        path="/TermsAndCondition"
-        element={
-          <>
-          <TermsAndCondition />
-          <FooterSection/>
-          </>
-        }
-        
+          path="/TermsAndCondition"
+          element={
+            <>
+              <TermsAndCondition />
+              <FooterSection />
+            </>
+          }
+        />
+
+        <Route
+          path="/volunteer"
+          element={
+            <>
+              <Volunteer />
+              <FooterSection />
+            </>
+          }
+        />
+
+        <Route
+          path="/members"
+          element={
+            <>
+              <Members />
+              <FooterSection />
+            </>
+          }
+        />
+
+        <Route
+          path="/learningHub"
+          element={
+            <>
+              <LearningHub />
+              <FooterSection />
+            </>
+          }
         />
       </Routes>
     </div>
