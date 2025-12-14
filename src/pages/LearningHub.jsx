@@ -14,7 +14,7 @@ const LearningHub = () => {
 
   const toggleSection = (section) => {
     setOpenSections((prev) => ({
-      ...prev,
+
       [section]: !prev[section],
     }));
   };
@@ -54,7 +54,14 @@ const LearningHub = () => {
                 constraints.
               </p>
               <img src="./images/learnText.svg" alt="" />
-              <button className="flex items-center justify-center text-[#038129] gap-1 border-3 border-dashed border-[#19D150] w-full bg-[#ABFFD7] rounded-lg text-xl font-bold py-2 px-4">
+              <button
+                onClick={() => {
+                  document.getElementById("banner")?.scrollIntoView({
+                    behavior: "smooth",
+                  });
+                }}
+                className="cursor-pointer hover:scale-105 transition-all duration-300 flex items-center justify-center text-[#038129] gap-1 border-3 border-dashed border-[#19D150] w-full bg-[#ABFFD7] rounded-lg text-xl font-bold py-2 px-4"
+              >
                 <span>Know More</span>
                 <HiArrowSmDown />
               </button>
@@ -62,11 +69,14 @@ const LearningHub = () => {
           </div>
         </div>
 
-        <div className="second">
+        <div id="banner" className="second">
           <img src="./images/learningHub2.png" alt="students learning" />
         </div>
 
-        <div className="third w-full grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div
+          id="offer"
+          className="third w-full grid grid-cols-1 md:grid-cols-2 gap-10"
+        >
           <div className="space-y-4">
             <h2 className="text-2xl font-bold tracking-normal border-b-2 border-[#19D150] w-fit">
               What We Offer ?
@@ -228,7 +238,7 @@ const LearningHub = () => {
               </div>
 
               {/* Skill Development Workshops */}
-              <div className="border-b border-zinc-500 py-6 px-2 transition-all duration-300 ease-in-out mb-5">
+              <div className=" border-zinc-500 py-6 px-2 transition-all duration-300 ease-in-out mb-5">
                 <h2
                   onClick={() => toggleSection("skills")}
                   className="flex items-center justify-between cursor-pointer text-2xl font-bold tracking-normal"
@@ -336,7 +346,7 @@ const LearningHub = () => {
               welcomes you.
             </p>
 
-            <div className="btns space-y-3">
+            <div className="btns space-y-4 mt-10">
               <a
                 href="https://docs.google.com/forms/d/e/1FAIpQLSeBSYTnXA-kyra6iVT4WkAEeIq_ZKVWcMa39Ppae4_tUpO3DQ/viewform"
                 target="_blank"

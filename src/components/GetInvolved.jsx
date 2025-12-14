@@ -10,7 +10,7 @@ const GetInvolved = () => {
           <h1 className="font-black text-4xl italic">Get Involved - Swastik Srijan Foundation</h1>
           <p className="max-w-130 font-bold text-zinc-500">join us to create impact in education , health, woman empowerment, environment and more</p>
         </div>
-        
+
         {/* volunteer */}
         <div className="w-full bg-[#ECF9FF] flex items-center flex-col-reverse md:flex-row gap-10 p-6 rounded-2xl">
           <div className="f_content flex flex-col gap-4 justify-around w-full md:w-1/2">
@@ -22,7 +22,7 @@ const GetInvolved = () => {
               <span className="bg-[#A7E1FF] py-1 px-4 rounded-md">Awareness Drives</span>
             </div>
             <Link to="/volunteer" className="bg-[#005DFF] text-white drop-shadow-md drop-shadow-white font-bold text-xl px-4 py-3 flex items-center justify-center gap-2 rounded-xl cursor-pointer hover:scale-103 active:scale-95 duration-200 transition-all ease">
-              <span>Explore</span> 
+              <span>Explore</span>
               <FaArrowRightLong />
             </Link>
           </div>
@@ -47,11 +47,11 @@ const GetInvolved = () => {
             <Link
             to="/members"
             className="bg-[#FB7C1B] hover:bg-[#f7842c] hover:scale-105 drop-shadow-md drop-shadow-white text-white font-bold text-xl px-4 py-3 flex items-center justify-center gap-2 rounded-xl cursor-pointer active:scale-90 duration-200 transition-all ease">
-              <span>Explore</span> 
+              <span>Explore</span>
               <FaArrowRightLong />
             </Link>
           </div>
-          
+
         </div>
 
         {/* SSF Learning Hub */}
@@ -68,11 +68,11 @@ const GetInvolved = () => {
               <span className="bg-[#72FABC] py-1 px-4 rounded-md">Workshops</span>
             </div>
             <Link to="/learningHub" className="bg-[#029D56] hover:bg-[#02af61] hover:scale-103 mt-2 text-white w-full font-bold text-xl px-4 py-3 flex items-center justify-center gap-2 rounded-xl cursor-pointer active:scale-90 duration-200 transition-all ease">
-              <span>Explore</span> 
+              <span>Explore</span>
               <FaArrowRightLong />
             </Link>
           </div>
-          
+
         </div>
 
         <div className="w-full p-6 rounded-2xl flex items-center justify-center">
@@ -82,7 +82,7 @@ const GetInvolved = () => {
               <img src="./images/cpi_group.svg" alt="" />
             </div>
             <button className="bg-[#FFD609] hover:bg-[#FFD609] hover:scale-105 mt-6 text-zinc-800 font-bold text-xl px-8 border-2 border-zinc-600/60 py-3 flex items-center justify-center gap-2 rounded-xl cursor-pointer active:scale-95 duration-200 transition-all ease">
-              <span>Apply Now</span> 
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSc3Wb-839SLDzv3A9QkbfpnJt_ORBQZbVByModSfDjQs-JuBQ/viewform" target="_blank">Apply Now</a>
               <FaArrowRightLong />
             </button>
           </div>
