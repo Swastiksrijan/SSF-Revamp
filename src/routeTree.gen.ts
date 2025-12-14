@@ -9,14 +9,50 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as VolunteerRouteImport } from './routes/Volunteer'
+import { Route as TermsAndConditionRouteImport } from './routes/TermsAndCondition'
+import { Route as MembersRouteImport } from './routes/Members'
+import { Route as MediaRouteImport } from './routes/Media'
+import { Route as LearningHubRouteImport } from './routes/LearningHub'
 import { Route as DonateAndSupportRouteImport } from './routes/DonateAndSupport'
+import { Route as ContactRouteImport } from './routes/Contact'
 import { Route as CampaignRouteImport } from './routes/Campaign'
 import { Route as BlogRouteImport } from './routes/Blog'
 import { Route as IndexRouteImport } from './routes/index'
 
+const VolunteerRoute = VolunteerRouteImport.update({
+  id: '/Volunteer',
+  path: '/Volunteer',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TermsAndConditionRoute = TermsAndConditionRouteImport.update({
+  id: '/TermsAndCondition',
+  path: '/TermsAndCondition',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MembersRoute = MembersRouteImport.update({
+  id: '/Members',
+  path: '/Members',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MediaRoute = MediaRouteImport.update({
+  id: '/Media',
+  path: '/Media',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LearningHubRoute = LearningHubRouteImport.update({
+  id: '/LearningHub',
+  path: '/LearningHub',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const DonateAndSupportRoute = DonateAndSupportRouteImport.update({
   id: '/DonateAndSupport',
   path: '/DonateAndSupport',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/Contact',
+  path: '/Contact',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CampaignRoute = CampaignRouteImport.update({
@@ -39,43 +75,140 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/Blog': typeof BlogRoute
   '/Campaign': typeof CampaignRoute
+  '/Contact': typeof ContactRoute
   '/DonateAndSupport': typeof DonateAndSupportRoute
+  '/LearningHub': typeof LearningHubRoute
+  '/Media': typeof MediaRoute
+  '/Members': typeof MembersRoute
+  '/TermsAndCondition': typeof TermsAndConditionRoute
+  '/Volunteer': typeof VolunteerRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/Blog': typeof BlogRoute
   '/Campaign': typeof CampaignRoute
+  '/Contact': typeof ContactRoute
   '/DonateAndSupport': typeof DonateAndSupportRoute
+  '/LearningHub': typeof LearningHubRoute
+  '/Media': typeof MediaRoute
+  '/Members': typeof MembersRoute
+  '/TermsAndCondition': typeof TermsAndConditionRoute
+  '/Volunteer': typeof VolunteerRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/Blog': typeof BlogRoute
   '/Campaign': typeof CampaignRoute
+  '/Contact': typeof ContactRoute
   '/DonateAndSupport': typeof DonateAndSupportRoute
+  '/LearningHub': typeof LearningHubRoute
+  '/Media': typeof MediaRoute
+  '/Members': typeof MembersRoute
+  '/TermsAndCondition': typeof TermsAndConditionRoute
+  '/Volunteer': typeof VolunteerRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/Blog' | '/Campaign' | '/DonateAndSupport'
+  fullPaths:
+    | '/'
+    | '/Blog'
+    | '/Campaign'
+    | '/Contact'
+    | '/DonateAndSupport'
+    | '/LearningHub'
+    | '/Media'
+    | '/Members'
+    | '/TermsAndCondition'
+    | '/Volunteer'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/Blog' | '/Campaign' | '/DonateAndSupport'
-  id: '__root__' | '/' | '/Blog' | '/Campaign' | '/DonateAndSupport'
+  to:
+    | '/'
+    | '/Blog'
+    | '/Campaign'
+    | '/Contact'
+    | '/DonateAndSupport'
+    | '/LearningHub'
+    | '/Media'
+    | '/Members'
+    | '/TermsAndCondition'
+    | '/Volunteer'
+  id:
+    | '__root__'
+    | '/'
+    | '/Blog'
+    | '/Campaign'
+    | '/Contact'
+    | '/DonateAndSupport'
+    | '/LearningHub'
+    | '/Media'
+    | '/Members'
+    | '/TermsAndCondition'
+    | '/Volunteer'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   BlogRoute: typeof BlogRoute
   CampaignRoute: typeof CampaignRoute
+  ContactRoute: typeof ContactRoute
   DonateAndSupportRoute: typeof DonateAndSupportRoute
+  LearningHubRoute: typeof LearningHubRoute
+  MediaRoute: typeof MediaRoute
+  MembersRoute: typeof MembersRoute
+  TermsAndConditionRoute: typeof TermsAndConditionRoute
+  VolunteerRoute: typeof VolunteerRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/Volunteer': {
+      id: '/Volunteer'
+      path: '/Volunteer'
+      fullPath: '/Volunteer'
+      preLoaderRoute: typeof VolunteerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/TermsAndCondition': {
+      id: '/TermsAndCondition'
+      path: '/TermsAndCondition'
+      fullPath: '/TermsAndCondition'
+      preLoaderRoute: typeof TermsAndConditionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/Members': {
+      id: '/Members'
+      path: '/Members'
+      fullPath: '/Members'
+      preLoaderRoute: typeof MembersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/Media': {
+      id: '/Media'
+      path: '/Media'
+      fullPath: '/Media'
+      preLoaderRoute: typeof MediaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/LearningHub': {
+      id: '/LearningHub'
+      path: '/LearningHub'
+      fullPath: '/LearningHub'
+      preLoaderRoute: typeof LearningHubRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/DonateAndSupport': {
       id: '/DonateAndSupport'
       path: '/DonateAndSupport'
       fullPath: '/DonateAndSupport'
       preLoaderRoute: typeof DonateAndSupportRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/Contact': {
+      id: '/Contact'
+      path: '/Contact'
+      fullPath: '/Contact'
+      preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/Campaign': {
@@ -106,7 +239,13 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   BlogRoute: BlogRoute,
   CampaignRoute: CampaignRoute,
+  ContactRoute: ContactRoute,
   DonateAndSupportRoute: DonateAndSupportRoute,
+  LearningHubRoute: LearningHubRoute,
+  MediaRoute: MediaRoute,
+  MembersRoute: MembersRoute,
+  TermsAndConditionRoute: TermsAndConditionRoute,
+  VolunteerRoute: VolunteerRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

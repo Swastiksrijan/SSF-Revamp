@@ -1,4 +1,4 @@
-import bgFrame from "../assets/bgTandC.png";
+
 function TermsAndCondition() {
     return (
         <div className="min-h-screen w-full flex flex-col items-center">

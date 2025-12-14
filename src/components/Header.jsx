@@ -1,89 +1,146 @@
 import React, { useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import { HiOutlineMenu, HiX } from "react-icons/hi";
-import { IoMdArrowDropdown } from "react-icons/io";
-import { motion } from "motion/react";
-import { Link, Links } from "react-router";
+import { Link } from "@tanstack/react-router";
+import {
+  HiOutlineCash,
+  HiOutlineDocumentText,
+  HiOutlinePhotograph,
+  HiOutlinePhone,
+  HiOutlineClipboardList,
+} from "react-icons/hi";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState(false);
-  const closeWhenClicked = ()=>{
-    setOpen(false)
-  }
+
+  const closeAll = () => {
+    setOpen(false);
+    setValue(false);
+  };
+
   return (
-    <div className="fixed top-0 left-0 right-0 z-20 flex justify-center  bg-white/60 backdrop-blur-lg border-b-2 border-neutral-200">
-      <div className="w-6xl flex items-center justify-between h-20 px-4  xl:px-0">
+    <div className="fixed top-0 left-0 right-0 z-20 flex justify-center bg-white/60 backdrop-blur-lg border-b-2 border-neutral-200">
+      <div className="w-6xl flex items-center justify-between h-20 px-4 xl:px-0">
         {/* Logo */}
-        <Link to="/">
+        <Link to="/" onClick={closeAll}>
           <img src="logo.svg" alt="logo" className="w-12" />
         </Link>
 
         {/* Desktop Menu */}
-        <ul className="hidden relative md:flex items-center gap-10 text-lg uppercase font-semibold">
-          <li className="cursor-pointer hover:bg-gray-300 px-2 rounded">
-            <Link to="/">Home</Link>
-          </li>
-          <li className="cursor-pointer hover:bg-gray-300 px-2 rounded">
-            <a href="#about">About Us</a>
+        <ul className="hidden relative md:flex items-center  lg:gap-10 text-lg uppercase font-semibold">
+          <li>
+            <Link to="/" className="hover:bg-gray-300 px-2 rounded">
+              Home
+            </Link>
           </li>
 
-          <li className="cursor-pointer hover:bg-gray-300 px-2 rounded">
-            <a href="#join-us">Join Us</a>
+          <li>
+            <Link
+              to="/"
+              hash="about"
+              className="hover:bg-gray-300 px-2 rounded"
+            >
+              About Us
+            </Link>
           </li>
-          <li className="cursor-pointer hover:bg-gray-300 px-2 rounded">
-            <Link to="/Campaign">Campaign</Link>
+
+          <li>
+            <Link
+              to="/"
+              hash="join-us"
+              className="hover:bg-gray-300 px-2 rounded"
+            >
+              Join Us
+            </Link>
           </li>
+
+          <li>
+            <Link to="/Campaign" className="hover:bg-gray-300 px-2 rounded">
+              Campaign
+            </Link>
+          </li>
+
           <li
-            onClick={() => {
-              setValue(!value);
-            }}
+            onClick={() => setValue(!value)}
             className="flex items-center gap-1 cursor-pointer hover:bg-gray-300 px-2 rounded"
           >
             More <IoIosArrowDown />
           </li>
-          {/* More Drop down button */}
+
+          {/* Dropdown */}
           {value && (
-            <div className="absolute top-10 -right-20 bg-white text-zinc-900 drop-shadow-xl border border-zinc-300/70 rounded-xl">
-              <ul className="">
-                <Link onClick={closeWhenClicked} to={'/DonateAndSupport'} className="flex gap-4 items-center border-b border-zinc-200/90 p-4 cursor-pointer hover:bg-[#f5f5f5] rounded-tl-xl rounded-tr-xl transition-all ease-in-out duration-300">
-                  <img src="./images/money_box.png" alt="money box image" />
-                  <span>Donate & Support</span>
+            <div className="absolute top-12 right-0 w-64 bg-white rounded-xl border border-gray-200 shadow-xl overflow-hidden">
+              <ul className="divide-y divide-gray-200 text-sm font-semibold uppercase">
+                <Link
+                  to="/DonateAndSupport"
+                  onClick={closeAll}
+                  className="flex items-center gap-3 px-5 py-4 hover:bg-gray-50 transition"
+                >
+                  <HiOutlineCash className="text-xl text-gray-700" />
+                  Donate & Support
                 </Link>
 
-                <Link onClick={closeWhenClicked} to={'/Blog'} className="flex gap-4 items-center border-b border-zinc-200/90 p-4 cursor-pointer hover:bg-[#f5f5f5] transition-all ease-in-out duration-100">
-                  <img src="./images/blog.png" alt="blog image" />
-                  <span>Blog</span>
+                <Link
+                  to="/Blog"
+                  onClick={closeAll}
+                  className="flex items-center gap-3 px-5 py-4 hover:bg-gray-50 transition"
+                >
+                  <HiOutlineDocumentText className="text-xl text-gray-700" />
+                  Blog
                 </Link>
 
-                <Link onClick={closeWhenClicked} to={'/Media'} className="flex gap-4 items-center border-b border-zinc-200/90 p-4 cursor-pointer hover:bg-[#f5f5f5] transition-all ease-in-out duration-100">
-                  <img src="./images/gallery.png" alt="gallery image" />
-                  <span>Media Gallery</span>
+                <Link
+                  to="/Media"
+                  onClick={closeAll}
+                  className="flex items-center gap-3 px-5 py-4 hover:bg-gray-50 transition"
+                >
+                  <HiOutlinePhotograph className="text-xl text-gray-700" />
+                  Media Gallery
                 </Link>
 
-                <Link onClick={closeWhenClicked} to={'/Contact'} className="flex gap-4 items-center border-b border-zinc-200/90 p-4 cursor-pointer hover:bg-[#f5f5f5] transition-all ease-in-out duration-100">
-                  <img src="./images/call.png" alt="contact image" />
-                  <span>Contact Us</span>
+                <Link
+                  to="/Contact"
+                  onClick={closeAll}
+                  className="flex items-center gap-3 px-5 py-4 hover:bg-gray-50 transition"
+                >
+                  <HiOutlinePhone className="text-xl text-gray-700" />
+                  Contact Us
                 </Link>
 
-                <Link onClick={closeWhenClicked} to={'/TermsAndCondition'} className="flex gap-4 items-center border-b border-zinc-200/90 p-4 cursor-pointer hover:bg-[#f5f5f5] rounded-bl-xl rounded-br-xl transition-all ease-in-out duration-100">
-                  <img src="./images/analyze.png" alt="analyze image" />
-                  <span>Terms & Conditions</span>
+                <Link
+                  to="/TermsAndCondition"
+                  onClick={closeAll}
+                  className="flex items-center gap-3 px-5 py-4 hover:bg-gray-50 transition"
+                >
+                  <HiOutlineClipboardList className="text-xl text-gray-700" />
+                  Terms & Conditions
                 </Link>
               </ul>
             </div>
           )}
+
         </ul>
+        {/* buttons */}
+        <div className="  gap-3 items-center justify-center hidden md:flex">
+            <a href="https://pages.razorpay.com/pl_NCiTn7wnBOJFYG/view" target="_blank">
+                <button className="px-6 w-full py-2 bg-[#005EFF] text-white hover:bg-black font-medium text-lg relative group transition-all duration-200 ease-in cursor-pointer">
 
-        {/* Desktop Donate Button */}
-        <button className="hidden md:block px-4 py-2 bg-[#005EFF] text-white hover:bg-black font-semibold text-lg relative group transition-all duration-200 ease-in cursor-pointer">
-          <a href="https://pages.razorpay.com/pl_NCiTn7wnBOJFYG/view" target="_blank">
-            Donate Now
-            <span className="absolute group-hover:translate-x-0 group-hover:translate-y-0 inset-0 bg-black translate-x-1.5 translate-y-1.5 -z-1 transition-all duration-200 ease-in"></span>
-          </a>
-        </button>
+                    Donate
+                    <span className="absolute group-hover:translate-x-0 group-hover:translate-y-0 inset-0 bg-black translate-x-1.5 translate-y-1.5 -z-1 transition-all duration-200 ease-in"></span>
 
-        {/* Mobile Hamburger */}
+                </button>
+                 </a>
+                 <Link to='/Volunteer' onClick={closeAll}>
+                  <button className="px-6 py-2 w-full bg-yellow-300 text-zinc-900 hover:bg-black hover:text-white font-semibold text-lg relative group transition-all duration-200 ease-in cursor-pointer">
+
+                    Apply
+                    <span className="absolute group-hover:translate-x-0 group-hover:translate-y-0 inset-0 bg-black translate-x-1.5 translate-y-1.5 -z-1 transition-all duration-200 ease-in"></span>
+
+                </button></Link>
+          </div>
+
+        {/* Mobile Toggle */}
         <button className="md:hidden text-3xl" onClick={() => setOpen(!open)}>
           {open ? <HiX /> : <HiOutlineMenu />}
         </button>
@@ -91,93 +148,97 @@ const Header = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden fixed top-20 left-0 w-full bg-white shadow-xl transition-all duration-300 ${open
+        className={`md:hidden fixed top-20 left-0 w-full bg-white shadow-xl transition-all duration-300 ${
+          open
             ? "opacity-100 translate-y-0"
             : "opacity-0 -translate-y-5 pointer-events-none"
-          }`}
+        }`}
       >
-        <ul className="flex flex-col items-start gap-4 p-6 text-lg uppercase font-semibold">
-          <li onClick={() => setOpen(false)}>
-            <Link to={"/"}>Home</Link>
+        <ul className="flex flex-col gap-3 p-6 text-lg uppercase font-semibold">
+          <Link to="/" onClick={closeAll}>
+            Home
+          </Link>
+          <Link to="/" hash="about" onClick={closeAll}>
+            About Us
+          </Link>
+          <Link to="/Campaign" onClick={closeAll}>
+            Campaign
+          </Link>
+          <Link to="/" hash="join-us" onClick={closeAll}>
+            Join Us
+          </Link>
+
+          <li
+            onClick={() => setValue(!value)}
+            className="flex items-center gap-1 cursor-pointer"
+          >
+            More
+            <IoIosArrowDown
+              className={`transition-transform duration-300 ${
+                value ? "rotate-180" : "rotate-0"
+              }`}
+            />
           </li>
 
-          <a href="#about" onClick={() => setOpen(false)}>
-            <li>About Us</li>
-          </a>
-
-          <li onClick={() => setOpen(false)}>
-            <Link to={'/Campaign'}>Campaign</Link>
-          </li>
-
-
-          <li onClick={() => setOpen(false)}>
-            <a href="#join-us">join us</a>
-          </li>
-
-        <li onClick={() => setValue(!value)} className="flex items-center gap-1">
-          More <IoIosArrowDown />
-        </li>
-
-        {value && (
-          <div className="text-zinc-900 w-full">
-            <ul className="space-y-3 w-full">
-              <Link onClick={closeWhenClicked} to={'/DonateAndSupport'} className="flex gap-4  items-center bg-[#F1EFEF] hover:bg-blue-50 transition-all ease-in-out duration-300 px-3 text-sm py-1.5 w-full cursor-pointer">
-                <img
-                  src="./images/money_box.png"
-                  alt="money box image"
-                  className="w-6"
-                />
-                <span>Donate & Support</span>
+          {value && (
+            <>
+              <Link
+                to="/DonateAndSupport"
+                onClick={closeAll}
+                className="px-4 py-2 text-sm bg-blue-100"
+              >
+                Donate & Support
               </Link>
-
-              <Link onClick={closeWhenClicked} to={'/Blog'} className="flex  gap-4  items-center bg-[#F1EFEF] hover:bg-blue-50 transition-all ease-in-out duration-300 px-3 text-sm py-1.5 w-full cursor-pointer">
-                <img
-                  src="./images/blog.png"
-                  alt="blog image"
-                  className="w-6"
-                />
-                <span>Blog</span>
+              <Link
+                to="/Blog"
+                onClick={closeAll}
+                className="px-4 py-2 text-sm bg-blue-100"
+              >
+                Blog
               </Link>
-
-              <Link onClick={closeWhenClicked} to={'/Media'} className="flex gap-4  items-center bg-[#F1EFEF] hover:bg-blue-50 transition-all ease-in-out duration-300 px-3 text-sm py-1.5 w-full cursor-pointer">
-                <img
-                  src="./images/gallery.png"
-                  alt="gallery image"
-                  className="w-6"
-                />
-                <span>Media Gallery</span>
+              <Link
+                to="/Media"
+                onClick={closeAll}
+                className="px-4 py-2 text-sm bg-blue-100"
+              >
+                Media Gallery
               </Link>
-
-              <Link onClick={closeWhenClicked} to={'/Contact'} className="flex gap-4  items-center bg-[#F1EFEF] hover:bg-blue-50 transition-all ease-in-out duration-300 px-3 text-sm py-1.5 w-full cursor-pointer">
-                <img
-                  src="./images/call.png"
-                  alt="contact image"
-                  className="w-6"
-                />
-                <span>Contact Us</span>
+              <Link
+                to="/Contact"
+                onClick={closeAll}
+                className="px-4 py-2 text-sm bg-blue-100"
+              >
+                Contact Us
               </Link>
-
-              <Link onClick={closeWhenClicked} to={'/TermsAndCondition'} className="flex gap-4  items-center bg-[#F1EFEF] hover:bg-blue-50 transition-all ease-in-out duration-300 px-3 text-sm py-1.5 w-full cursor-pointer">
-                <img
-                  src="./images/analyze.png"
-                  alt="analyze image"
-                  className="w-6"
-                />
-                <span>Terms & Conditions</span>
+              <Link
+                to="/TermsAndCondition"
+                onClick={closeAll}
+                className="px-4 py-2 text-sm bg-blue-100"
+              >
+                Terms & Conditions
               </Link>
-            </ul>
+            </>
+          )}
+          <div className="pt-4 flex flex-col gap-3 w-full">
+            <a href="https://pages.razorpay.com/pl_NCiTn7wnBOJFYG/view" target="_blank">
+                <button className="px-4 w-full py-2 bg-[#005EFF] text-white hover:bg-black font-medium text-lg relative group transition-all duration-200 ease-in cursor-pointer">
+
+                    Donate Now
+                    <span className="absolute group-hover:translate-x-0 group-hover:translate-y-0 inset-0 bg-black translate-x-1.5 translate-y-1.5 -z-1 transition-all duration-200 ease-in"></span>
+
+                </button>
+                 </a>
+                 <Link to='/Volunteer' onClick={closeAll}>
+                  <button className="px-4 py-2 w-full bg-yellow-300 text-zinc-900 hover:bg-black hover:text-white font-semibold text-lg relative group transition-all duration-200 ease-in cursor-pointer">
+
+                    Join As Volunteer
+                    <span className="absolute group-hover:translate-x-0 group-hover:translate-y-0 inset-0 bg-black translate-x-1.5 translate-y-1.5 -z-1 transition-all duration-200 ease-in"></span>
+
+                </button></Link>
           </div>
-        )}
-
-        <button className="mt-4 w-full px-4 py-2 bg-[#005EFF] text-white hover:bg-black font-semibold text-lg relative group transition-all duration-200 ease-in cursor-pointer">
-          <a href="https://pages.razorpay.com/pl_NCiTn7wnBOJFYG/view" target="_blank">
-            Donate Now
-            <span className="absolute group-hover:translate-x-0 group-hover:translate-y-0 inset-0 bg-black translate-x-1.5 translate-y-1.5 -z-1 transition-all duration-200 ease-in"></span>
-          </a>
-        </button>
-      </ul>
+        </ul>
+      </div>
     </div>
-    </div >
   );
 };
 
